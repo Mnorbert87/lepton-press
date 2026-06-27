@@ -1,0 +1,16 @@
+{
+  "name": "lepton-press",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Nanopayment paywall for the agentic web — publishers get paid per paragraph in USDC on Arc.",
+  "scripts": {
+    "server": "node server.js",
+    "read": "node reader.js",
+    "demo": "./run.sh"
+  },
+  "dependencies": {
+    "ethers": "^6.13.0"
+  },
+  "engines": { "node": ">=18" }
+}

@@ -1,0 +1,199 @@
+{
+  "publisher": "0xed13AA20701F503304bADB7697cbFD4d0C952Acf",
+  "note": "totalRevenueUSDC is the metered per-paragraph reads only (StreamPay Withdrawn) — it is NOT the address's full on-chain revenue. The complete, chain-verified receipts are in `revenue`: metered reads plus the streamed engagement-time swept to the publisher on disengagement (Cancelled.toRecipient). The chain is the source of truth; the creator dashboard reconstructs both components live from on-chain events. All figures regenerated directly from Arc events for this publisher from block 48947500.",
+  "revenue": {
+    "meteredReadsUSDC": "0.020314",
+    "engagementSettlementUSDC": "0.525004",
+    "totalReceivedUSDC": "0.545318"
+  },
+  "totalRevenueUSDC": "0.020314",
+  "streamsOpened": 50,
+  "meteredReadCount": 182,
+  "engagementSettlementCount": 50,
+  "byArticle": {
+    "agent-reading-economics": "0.007200",
+    "arc-nanopayments": "0.013114"
+  },
+  "recentSettlements": [
+    {
+      "article": "arc-nanopayments",
+      "stream": 204,
+      "usdc": "0.000112",
+      "kind": "metered-read",
+      "tx": "0x919aa6cfc4e6e93440665ce32a40b2d522fa5e7be506d9f68a55f24a5628d9cd",
+      "explorer": "https://testnet.arcscan.app/tx/0x919aa6cfc4e6e93440665ce32a40b2d522fa5e7be506d9f68a55f24a5628d9cd",
+      "at": "2026-06-27T10:47:32.000Z"
+    },
+    {
+      "article": "arc-nanopayments",
+      "stream": 204,
+      "usdc": "0.000122",
+      "kind": "metered-read",
+      "tx": "0xb39a8e149ebfd6170097f0cc0254edcf0b5df93c7bbe457f6b0ba28282d52bad",
+      "explorer": "https://testnet.arcscan.app/tx/0xb39a8e149ebfd6170097f0cc0254edcf0b5df93c7bbe457f6b0ba28282d52bad",
+      "at": "2026-06-27T10:47:27.000Z"
+    },
+    {
+      "article": "arc-nanopayments",
+      "stream": 204,
+      "usdc": "0.000120",
+      "kind": "metered-read",
+      "tx": "0xf39ab90dc4348da763ebc44ad04998bb5502120830c537664f1f44a696e1ee08",
+      "explorer": "https://testnet.arcscan.app/tx/0xf39ab90dc4348da763ebc44ad04998bb5502120830c537664f1f44a696e1ee08",
+      "at": "2026-06-27T10:47:23.000Z"
+    },
+    {
+      "article": "arc-nanopayments",
+      "stream": 204,
+      "usdc": "0.000128",
+      "kind": "metered-read",
+      "tx": "0x7691525d4b9b8d603d8df01f204d0806aa65baf248a95784f37d21d4d359e6aa",
+      "explorer": "https://testnet.arcscan.app/tx/0x7691525d4b9b8d603d8df01f204d0806aa65baf248a95784f37d21d4d359e6aa",
+      "at": "2026-06-27T10:47:18.000Z"
+    },
+    {
+      "article": "arc-nanopayments",
+      "stream": 204,
+      "usdc": "0.000112",
+      "kind": "metered-read",
+      "tx": "0x851adeb7e75a1b0b2c88341ee9ad05c0c4dcd5d73d7e29b85e84d43f1faa6f37",
+      "explorer": "https://testnet.arcscan.app/tx/0x851adeb7e75a1b0b2c88341ee9ad05c0c4dcd5d73d7e29b85e84d43f1faa6f37",
+      "at": "2026-06-27T10:47:13.000Z"
+    },
+    {
+      "article": "arc-nanopayments",
+      "stream": 203,
+      "usdc": "0.000112",
+      "kind": "metered-read",
+      "tx": "0x01cdc765e2361a9b64512927c828ca74fb8812e5472453d897201c2f3b181629",
+      "explorer": "https://testnet.arcscan.app/tx/0x01cdc765e2361a9b64512927c828ca74fb8812e5472453d897201c2f3b181629",
+      "at": "2026-06-27T10:46:58.000Z"
+    },
+    {
+      "article": "arc-nanopayments",
+      "stream": 203,
+      "usdc": "0.000122",
+      "kind": "metered-read",
+      "tx": "0xe1bc42c7c89344c41139763a1ddf7c3dd074b36dcfc5af0b012a02196bc3767b",
+      "explorer": "https://testnet.arcscan.app/tx/0xe1bc42c7c89344c41139763a1ddf7c3dd074b36dcfc5af0b012a02196bc3767b",
+      "at": "2026-06-27T10:46:53.000Z"
+    },
+    {
+      "article": "arc-nanopayments",
+      "stream": 203,
+      "usdc": "0.000120",
+      "kind": "metered-read",
+      "tx": "0xb640e6a647e95c10f86dba8a4208f79d2c47cdf9d5933015045c903dc96b1cfe",
+      "explorer": "https://testnet.arcscan.app/tx/0xb640e6a647e95c10f86dba8a4208f79d2c47cdf9d5933015045c903dc96b1cfe",
+      "at": "2026-06-27T10:46:49.000Z"
+    },
+    {
+      "article": "arc-nanopayments",
+      "stream": 203,
+      "usdc": "0.000128",
+      "kind": "metered-read",
+      "tx": "0x82e990d830ac67a33e045b2a73ef8d1c61850e3ab18b18147b1248714889015b",
+      "explorer": "https://testnet.arcscan.app/tx/0x82e990d830ac67a33e045b2a73ef8d1c61850e3ab18b18147b1248714889015b",
+      "at": "2026-06-27T10:46:44.000Z"
+    },
+    {
+      "article": "arc-nanopayments",
+      "stream": 203,
+      "usdc": "0.000112",
+      "kind": "metered-read",
+      "tx": "0x1db828be3335253a53ebe677007458117a8b781387db9a1d6db2109ec79c7f1d",
+      "explorer": "https://testnet.arcscan.app/tx/0x1db828be3335253a53ebe677007458117a8b781387db9a1d6db2109ec79c7f1d",
+      "at": "2026-06-27T10:46:40.000Z"
+    },
+    {
+      "article": "arc-nanopayments",
+      "stream": 202,
+      "usdc": "0.000122",
+      "kind": "metered-read",
+      "tx": "0xeb97472cf0601f5e6da23a3a7967c262d28cf87d10c0e9c8acd4c63517be6222",
+      "explorer": "https://testnet.arcscan.app/tx/0xeb97472cf0601f5e6da23a3a7967c262d28cf87d10c0e9c8acd4c63517be6222",
+      "at": "2026-06-27T08:54:03.000Z"
+    },
+    {
+      "article": "arc-nanopayments",
+      "stream": 202,
+      "usdc": "0.000120",
+      "kind": "metered-read",
+      "tx": "0x838c2a857b931850a3599bd1f71c10a1ae02c6f7eda55c5e9ccde5843af4acc3",
+      "explorer": "https://testnet.arcscan.app/tx/0x838c2a857b931850a3599bd1f71c10a1ae02c6f7eda55c5e9ccde5843af4acc3",
+      "at": "2026-06-27T08:53:59.000Z"
+    },
+    {
+      "article": "arc-nanopayments",
+      "stream": 202,
+      "usdc": "0.000128",
+      "kind": "metered-read",
+      "tx": "0xee832920cb0f17d3e9867ba23b95a1630cc79a32503b935420d57b88ae5db187",
+      "explorer": "https://testnet.arcscan.app/tx/0xee832920cb0f17d3e9867ba23b95a1630cc79a32503b935420d57b88ae5db187",
+      "at": "2026-06-27T08:53:54.000Z"
+    },
+    {
+      "article": "arc-nanopayments",
+      "stream": 202,
+      "usdc": "0.000112",
+      "kind": "metered-read",
+      "tx": "0xa4139adf231c785a2b6d39a46ca09967042d461b722bdd83a66e2baac3d5cb61",
+      "explorer": "https://testnet.arcscan.app/tx/0xa4139adf231c785a2b6d39a46ca09967042d461b722bdd83a66e2baac3d5cb61",
+      "at": "2026-06-27T08:53:49.000Z"
+    },
+    {
+      "article": "agent-reading-economics",
+      "stream": 201,
+      "usdc": "0.000100",
+      "kind": "metered-read",
+      "tx": "0xd87279af8cde46186dbb0964986a23dd37c1846eb320115bf374bb27cb95dbf2",
+      "explorer": "https://testnet.arcscan.app/tx/0xd87279af8cde46186dbb0964986a23dd37c1846eb320115bf374bb27cb95dbf2",
+      "at": "2026-06-27T08:53:34.000Z"
+    },
+    {
+      "article": "agent-reading-economics",
+      "stream": 201,
+      "usdc": "0.000100",
+      "kind": "metered-read",
+      "tx": "0xddb818383fee2b39505b4adec076f183188bd224e726a31c528caae734ebc559",
+      "explorer": "https://testnet.arcscan.app/tx/0xddb818383fee2b39505b4adec076f183188bd224e726a31c528caae734ebc559",
+      "at": "2026-06-27T08:53:30.000Z"
+    },
+    {
+      "article": "agent-reading-economics",
+      "stream": 201,
+      "usdc": "0.000100",
+      "kind": "metered-read",
+      "tx": "0x22a3bd56e8af341cdcecd2c370d4801f8753139efc29b083000312db2f7bbb7a",
+      "explorer": "https://testnet.arcscan.app/tx/0x22a3bd56e8af341cdcecd2c370d4801f8753139efc29b083000312db2f7bbb7a",
+      "at": "2026-06-27T08:53:25.000Z"
+    },
+    {
+      "article": "arc-nanopayments",
+      "stream": 200,
+      "usdc": "0.000112",
+      "kind": "metered-read",
+      "tx": "0x9c1e5b94fa7424564a543eb033ce3342794fec99fbd3a56536caa2f27d78408f",
+      "explorer": "https://testnet.arcscan.app/tx/0x9c1e5b94fa7424564a543eb033ce3342794fec99fbd3a56536caa2f27d78408f",
+      "at": "2026-06-27T08:53:10.000Z"
+    },
+    {
+      "article": "arc-nanopayments",
+      "stream": 200,
+      "usdc": "0.000122",
+      "kind": "metered-read",
+      "tx": "0xfed6a3f4f33a81be85983696f00f7b96e2039fdba6148ed082a8b12d9b75bbaf",
+      "explorer": "https://testnet.arcscan.app/tx/0xfed6a3f4f33a81be85983696f00f7b96e2039fdba6148ed082a8b12d9b75bbaf",
+      "at": "2026-06-27T08:53:05.000Z"
+    },
+    {
+      "article": "arc-nanopayments",
+      "stream": 200,
+      "usdc": "0.000120",
+      "kind": "metered-read",
+      "tx": "0x170638dcd561f15ffea0ac7dcdea6a6b3945d4d57ad8c1972fc0abae1c8736e9",
+      "explorer": "https://testnet.arcscan.app/tx/0x170638dcd561f15ffea0ac7dcdea6a6b3945d4d57ad8c1972fc0abae1c8736e9",
+      "at": "2026-06-27T08:53:01.000Z"
+    }
+  ]
+}

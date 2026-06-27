@@ -1,0 +1,76 @@
+{
+  "question": "why can card networks not serve micropayments, and what changes it",
+  "article": "arc-nanopayments",
+  "broker": "0x2e36F4037E711e1d4c853BBCBF7F526B3714A08a",
+  "consumer": "0x63c56c17851C7b2f036F194CCb08FBc2cCC57b72",
+  "judge": {
+    "mode": "heuristic"
+  },
+  "explorer": "https://testnet.arcscan.app/tx",
+  "hop1": {
+    "paragraphs": [
+      {
+        "n": 0,
+        "paidUSDC": "0.000112",
+        "tx": "0x851adeb7e75a1b0b2c88341ee9ad05c0c4dcd5d73d7e29b85e84d43f1faa6f37",
+        "explorer": "https://testnet.arcscan.app/tx/0x851adeb7e75a1b0b2c88341ee9ad05c0c4dcd5d73d7e29b85e84d43f1faa6f37",
+        "relevance": 20,
+        "text": "For thirty years the web has had exactly one business model that pays writers reliably: bundle the work into something big enough to justify a card charge. A subscription, a course, a paywalled month. Anything cheaper than roughly fifty cents simply could not be sold, because the payment itself cost more than the thing being bought."
+      },
+      {
+        "n": 1,
+        "paidUSDC": "0.000128",
+        "tx": "0x7691525d4b9b8d603d8df01f204d0806aa65baf248a95784f37d21d4d359e6aa",
+        "explorer": "https://testnet.arcscan.app/tx/0x7691525d4b9b8d603d8df01f204d0806aa65baf248a95784f37d21d4d359e6aa",
+        "relevance": 40,
+        "text": "That floor was never a law of nature. It was the cost of moving money through card networks: interchange, gateway fees, fraud reserves, chargeback risk. Those costs are fixed per transaction, so they crush small payments and vanish into large ones. The long tail of writing that is worth a tenth of a cent to a reader has been economically invisible the entire time."
+      },
+      {
+        "n": 2,
+        "paidUSDC": "0.000120",
+        "tx": "0xf39ab90dc4348da763ebc44ad04998bb5502120830c537664f1f44a696e1ee08",
+        "explorer": "https://testnet.arcscan.app/tx/0xf39ab90dc4348da763ebc44ad04998bb5502120830c537664f1f44a696e1ee08",
+        "relevance": 20,
+        "text": "Stablecoins on a settlement-first chain change the arithmetic. When USDC is the native gas token and a block finalises in under a second, the marginal cost of a transfer collapses toward the gas itself. A payment of one millionth of a dollar stops being absurd and becomes routine. The smallest coin of antiquity, the lepton, finally has a digital equivalent."
+      },
+      {
+        "n": 3,
+        "paidUSDC": "0.000122",
+        "tx": "0xb39a8e149ebfd6170097f0cc0254edcf0b5df93c7bbe457f6b0ba28282d52bad",
+        "explorer": "https://testnet.arcscan.app/tx/0xb39a8e149ebfd6170097f0cc0254edcf0b5df93c7bbe457f6b0ba28282d52bad",
+        "relevance": 0,
+        "text": "The first buyers of nanopaid content will not be humans clicking a tip jar. They will be agents: research bots, summarisers, retrieval pipelines that read thousands of sources and would happily pay each one a fraction of a cent rather than scrape it for free. Per-read settlement turns adversarial scraping into a market, and turns every paragraph into a metered good."
+      },
+      {
+        "n": 4,
+        "paidUSDC": "0.000112",
+        "tx": "0x919aa6cfc4e6e93440665ce32a40b2d522fa5e7be506d9f68a55f24a5628d9cd",
+        "explorer": "https://testnet.arcscan.app/tx/0x919aa6cfc4e6e93440665ce32a40b2d522fa5e7be506d9f68a55f24a5628d9cd",
+        "relevance": 0,
+        "text": "What this needs is not a new token but a new toll booth: a way for a publisher to charge a machine per paragraph, prove the payment on chain, and release the text only after the money has actually vested. That is the whole of Lepton Press, and the rest of this article is the spec."
+      }
+    ],
+    "streamId": "204",
+    "costUSDC": "0.013333"
+  },
+  "publisher": "0xed13AA20701F503304bADB7697cbFD4d0C952Acf",
+  "answer": "For thirty years the web has had exactly one business model that pays writers reliably: bundle the work into something big enough to justify a card charge. That floor was never a law of nature. Stablecoins on a settlement-first chain change the arithmetic. The first buyers of nanopaid content will not be humans clicking a tip jar. What this needs is not a new token but a new toll booth: a way for a publisher to charge a machine per paragraph, prove the payment on chain, and release the text only after the money has actually vested.",
+  "synthesis": {
+    "mode": "extractive",
+    "model": null
+  },
+  "hop2": {
+    "priceUSDC": "0.021332",
+    "markup": 0.6,
+    "streamId": "205",
+    "settledUSDC": "0.021332",
+    "tx": "0x3bfb0461abfe7cfaa5811fd51d65b76505a2a55b3d3387f715983e379188bcc3",
+    "explorer": "https://testnet.arcscan.app/tx/0x3bfb0461abfe7cfaa5811fd51d65b76505a2a55b3d3387f715983e379188bcc3"
+  },
+  "economics": {
+    "costUSDC": "0.013333",
+    "revenueUSDC": "0.021332",
+    "profitUSDC": "0.007999",
+    "markup": 0.6
+  }
+}

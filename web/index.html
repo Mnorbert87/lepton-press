@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Lepton Press — live nano-revenue on Arc</title>
+<meta name="color-scheme" content="dark" />
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://esm.sh; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; connect-src 'self' https://esm.sh https://rpc.testnet.arc.network; img-src 'self' data:; object-src 'none'; base-uri 'none'; frame-ancestors 'none'" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,800;1,9..144,500;1,9..144,800&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg:#04050b; --bg2:#06080f;
+    --panel:rgba(17,21,38,.5); --panel2:rgba(22,28,52,.7);
+    --line:rgba(150,170,235,.10); --line2:rgba(229,194,118,.24);
+    --ink:#f5f3ec; --dim:#a7b0cf; --faint:#6c769b;
+    --arc:#5b93ff; --cyan:#38e2f0;
+    --gold:#e5c276; --gold2:#f6e3ab; --champ:#c79f57; --bronze:#9c7a3c;
+    --mono:"JetBrains Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+    --serif:"Fraunces",Georgia,"Times New Roman",serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:"Space Grotesk",ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+    background:
+      radial-gradient(130% 90% at 50% -12%, #0b1228 0%, var(--bg2) 42%, var(--bg) 100%) fixed;
+    color:var(--ink); min-height:100vh; overflow-x:hidden;
+    -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+  }
+  /* aurora — deep, slow, with a champagne ember */
+  body::before{
+    content:""; position:fixed; inset:-50% -18% auto -18%; height:115vh; z-index:0;
+    background:
+      radial-gradient(38% 52% at 20% 16%,rgba(91,147,255,.26),transparent 70%),
+      radial-gradient(34% 46% at 84% 6%,rgba(56,226,240,.16),transparent 70%),
+      radial-gradient(32% 44% at 62% 34%,rgba(229,194,118,.16),transparent 72%),
+      radial-gradient(52% 70% at 46% 52%,rgba(99,102,241,.14),transparent 72%);
+    filter:blur(52px); animation:drift 32s ease-in-out infinite alternate; pointer-events:none;
+  }
+  /* fine film grain so flat darks feel like printed stock */
+  body::after{
+    content:""; position:fixed; inset:0; z-index:0; pointer-events:none; opacity:.04;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+  @keyframes drift{from{transform:translate3d(-3%,-2%,0) scale(1)}to{transform:translate3d(4%,3%,0) scale(1.12)}}
+  .wrap{position:relative; z-index:1; max-width:1140px; margin:0 auto; padding:46px 24px 96px}
+
+  /* ── Masthead (newspaper nameplate) ─────────────────────────────────────── */
+  .masthead{text-align:center; margin-bottom:30px}
+  .kicker{
+    font-family:var(--mono); font-size:10.5px; letter-spacing:.46em; font-weight:500;
+    color:var(--faint); text-transform:uppercase; margin-bottom:14px;
+  }
+  .nameplate{
+    font-family:var(--serif); font-weight:800; font-size:clamp(44px,9vw,104px); line-height:.9;
+    letter-spacing:-.02em; position:relative; display:inline-block;
+    background:linear-gradient(100deg,var(--bronze) 0%,var(--gold2) 26%,#fffaf0 44%,var(--gold2) 60%,var(--champ) 80%,var(--bronze) 100%);
+    background-size:280% 100%;
+    -webkit-background-clip:text; background-clip:text; color:transparent;
+    animation:foil 7s linear infinite;
+    filter:drop-shadow(0 2px 30px rgba(229,194,118,.18));
+  }
+  @keyframes foil{from{background-position:0% 50%}to{background-position:280% 50%}}
+  .deck{
+    font-family:var(--serif); font-style:italic; font-weight:500; color:var(--dim);
+    font-size:clamp(14px,2.1vw,18px); margin-top:14px; letter-spacing:.01em;
+  }
+  /* double rule like a broadsheet */
+  .dbl-rule{display:flex; flex-direction:column; gap:3px; margin:22px auto 0; max-width:880px}
+  .dbl-rule i{height:1px; background:linear-gradient(90deg,transparent,var(--line2) 18%,var(--line2) 82%,transparent)}
+  .dbl-rule i:last-child{opacity:.45}
+  .dateline{
+    display:flex; justify-content:center; gap:10px; flex-wrap:wrap; align-items:center;
+    margin-top:16px; font-size:11.5px;
+  }
+  .dl{
+    font-family:var(--mono); color:var(--faint); letter-spacing:.06em;
+    display:inline-flex; align-items:center; gap:7px; font-variant-numeric:tabular-nums;
+  }
+  .dl b{color:var(--dim); font-weight:500}
+  .dl a{color:var(--gold2); text-decoration:none}
+  .dl a:hover{text-decoration:underline}
+  .dl.live{color:var(--cyan)}
+  .sep{color:var(--line2)}
+  .dot{width:7px; height:7px; border-radius:50%; background:var(--cyan); box-shadow:0 0 0 0 rgba(56,226,240,.6); animation:pulse 2s infinite}
+  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(56,226,240,.5)}70%{box-shadow:0 0 0 8px rgba(56,226,240,0)}100%{box-shadow:0 0 0 0 rgba(56,226,240,0)}}
+
+  .lede{
+    font-family:var(--serif); font-size:clamp(17px,2.3vw,21px); line-height:1.55; color:var(--dim);
+    max-width:64ch; margin:30px auto 38px; text-align:center; font-weight:400;
+  }
+  .lede b{color:var(--ink); font-weight:600}
+  .lede .drop{
+    float:none; font-weight:800; font-style:italic;
+    background:linear-gradient(105deg,var(--gold2),var(--champ)); -webkit-background-clip:text; background-clip:text; color:transparent;
+  }
+
+  /* ── Hero revenue card ──────────────────────────────────────────────────── */
+  .hero{
+    position:relative; border-radius:24px; padding:38px 40px 34px; margin-bottom:18px; overflow:hidden;
+    background:
+      radial-gradient(120% 160% at 0% 0%, rgba(229,194,118,.18), transparent 52%),
+      radial-gradient(90% 120% at 100% 100%, rgba(91,147,255,.10), transparent 55%),
+      var(--panel2);
+    border:1px solid var(--line2);
+    box-shadow:0 40px 90px -50px rgba(0,0,0,.9), 0 0 80px -50px rgba(229,194,118,.5) inset;
+    backdrop-filter:blur(20px); -webkit-backdrop-filter:blur(20px);
+  }
+  .hero::before{content:""; position:absolute; inset:0 0 auto 0; height:1px; background:linear-gradient(90deg,transparent,var(--gold2),transparent); opacity:.8}
+  /* slow shimmer sweep across the hero */
+  .hero::after{
+    content:""; position:absolute; top:0; left:-60%; width:50%; height:100%; pointer-events:none;
+    background:linear-gradient(105deg,transparent,rgba(255,250,240,.06),transparent);
+    transform:skewX(-18deg); animation:sweep 6.5s ease-in-out infinite;
+  }
+  @keyframes sweep{0%{left:-60%}55%,100%{left:160%}}
+  .hero-grid{position:relative; display:grid; grid-template-columns:1.15fr 1fr; gap:30px; align-items:center}
+  @media(max-width:720px){.hero-grid{grid-template-columns:1fr; gap:24px}}
+  .hero .k{font-size:11px; color:var(--champ); letter-spacing:.18em; text-transform:uppercase; font-weight:600}
+  .hero .big{
+    font-family:var(--mono); font-weight:700; font-size:clamp(44px,8.4vw,76px); line-height:1;
+    margin-top:14px; font-variant-numeric:tabular-nums; letter-spacing:-.02em;
+    background:linear-gradient(100deg,var(--gold2) 0%,#fffaf0 40%,var(--champ) 100%);
+    -webkit-background-clip:text; background-clip:text; color:transparent;
+    text-shadow:0 0 40px rgba(229,194,118,.12);
+  }
+  .hero .cur{font-size:.42em; color:var(--bronze); -webkit-text-fill-color:var(--bronze); margin-right:.12em; vertical-align:.32em; font-weight:500}
+  .hero .u{font-size:13px; color:var(--faint); margin-top:10px; letter-spacing:.02em}
+  .hero .u b{color:var(--dim); font-weight:600}
+  /* sparkline */
+  .spark-wrap{position:relative}
+  .spark-cap{font-size:10.5px; color:var(--faint); letter-spacing:.16em; text-transform:uppercase; font-weight:600; margin-bottom:10px}
+  svg.spark{width:100%; height:108px; display:block; overflow:visible}
+  .spark path.area{fill:url(#sparkfill)}
+  .spark path.line{fill:none; stroke:url(#sparkline); stroke-width:2.4; stroke-linecap:round; stroke-linejoin:round;
+    filter:drop-shadow(0 2px 8px rgba(229,194,118,.35))}
+  .spark circle{fill:#fffaf0; stroke:var(--champ); stroke-width:2; filter:drop-shadow(0 0 7px rgba(246,227,171,.8))}
+  .spark .grid{stroke:var(--line); stroke-width:1; stroke-dasharray:2 5}
+
+  /* ── Stat trio ──────────────────────────────────────────────────────────── */
+  .stats{display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-bottom:24px}
+  @media(max-width:620px){.stats{grid-template-columns:1fr}}
+  .stat{
+    position:relative; background:var(--panel); border:1px solid var(--line); border-radius:18px; padding:22px 24px;
+    backdrop-filter:blur(16px); -webkit-backdrop-filter:blur(16px); overflow:hidden;
+    transition:transform .4s cubic-bezier(.2,.8,.2,1), border-color .4s, box-shadow .4s;
+  }
+  .stat::before{content:""; position:absolute; inset:0 0 auto 0; height:1px; background:linear-gradient(90deg,transparent,var(--line2),transparent); opacity:.6}
+  .stat:hover{transform:translateY(-5px); border-color:var(--line2); box-shadow:0 24px 60px -30px rgba(0,0,0,.85)}
+  .stat .k{font-size:10.5px; color:var(--faint); letter-spacing:.14em; text-transform:uppercase; font-weight:600}
+  .stat .v{font-family:var(--mono); font-size:clamp(26px,3.6vw,36px); font-weight:700; margin-top:12px; font-variant-numeric:tabular-nums; letter-spacing:-.01em}
+  .stat .v.cyan{color:var(--cyan)}
+  .stat .v.gold{background:linear-gradient(100deg,var(--gold2),var(--champ)); -webkit-background-clip:text; background-clip:text; color:transparent}
+  .stat .u{font-size:12px; color:var(--faint); margin-top:7px}
+
+  /* ── Revenue breakdown (metered vs engagement-time, co-equal) ─────────────── */
+  .revbreak{margin-top:18px; padding-top:16px; border-top:1px solid var(--line)}
+  .revbreak .rb-row{display:flex; align-items:flex-start; gap:18px}
+  .revbreak .rb-item{flex:1; min-width:0}
+  .revbreak .rb-plus{font-family:var(--mono); font-size:18px; color:var(--faint); padding-top:6px; flex:0 0 auto}
+  .revbreak .rb-num{font-family:var(--mono); font-size:clamp(18px,2.2vw,23px); font-weight:700; font-variant-numeric:tabular-nums; letter-spacing:-.01em}
+  .revbreak .rb-metered .rb-num{color:var(--cyan)}
+  .revbreak .rb-sweep .rb-num{background:linear-gradient(100deg,var(--gold2),var(--champ)); -webkit-background-clip:text; background-clip:text; color:transparent}
+  .revbreak .rb-lbl{font-size:11px; color:var(--faint); letter-spacing:.07em; text-transform:uppercase; font-weight:600; margin-top:5px; line-height:1.5}
+  .revbreak .rb-pct{font-family:var(--mono); color:var(--dim); margin-left:4px; letter-spacing:0}
+  .revbreak .rb-bar{display:flex; height:7px; border-radius:4px; overflow:hidden; margin-top:14px; background:rgba(255,255,255,.04)}
+  .revbreak .rb-bar i{display:block; height:100%; transition:width .9s cubic-bezier(.2,.8,.2,1)}
+  .revbreak .rb-bar #rb-bar-metered{background:linear-gradient(90deg,#2aa9c4,var(--cyan))}
+  .revbreak .rb-bar #rb-bar-sweep{background:linear-gradient(90deg,var(--champ),var(--gold2))}
+  .revbreak .rb-cap{font-size:12px; color:var(--dim); line-height:1.7; margin-top:13px; font-family:var(--serif); font-style:italic}
+
+  /* ── Panels ─────────────────────────────────────────────────────────────── */
+  .panel{
+    position:relative; background:var(--panel); border:1px solid var(--line); border-radius:20px; padding:2px 2px 6px;
+    backdrop-filter:blur(16px); -webkit-backdrop-filter:blur(16px); margin-bottom:22px; overflow:hidden;
+  }
+  .panel::before{content:""; position:absolute; inset:0 0 auto 0; height:1px; background:linear-gradient(90deg,transparent,var(--line2),transparent); opacity:.5}
+  .panel h2{
+    font-family:var(--mono); font-size:10.5px; color:var(--champ); letter-spacing:.24em; text-transform:uppercase;
+    padding:20px 24px 14px; font-weight:700; display:flex; align-items:center; gap:10px;
+  }
+  .panel h2 .tick{flex:1; height:1px; background:linear-gradient(90deg,var(--line2),transparent)}
+  table{width:100%; border-collapse:collapse; font-size:14px}
+  th,td{text-align:left; padding:13px 24px; border-top:1px solid var(--line); font-variant-numeric:tabular-nums}
+  th{font-size:10px; color:var(--faint); text-transform:uppercase; letter-spacing:.12em; border-top:none; font-weight:600}
+  tbody tr{transition:background .2s}
+  tbody tr:hover{background:rgba(229,194,118,.05)}
+  td .art{font-family:var(--serif); font-style:italic; font-size:15px; color:var(--ink)}
+  td.num{text-align:right; color:var(--gold2); font-family:var(--mono); font-weight:500}
+  td .id{font-family:var(--mono); color:var(--dim); font-size:13px}
+  tr td a{color:var(--cyan); text-decoration:none; font-family:var(--mono); font-size:12px}
+  tr td a:hover{text-decoration:underline}
+  .empty{padding:34px 24px; color:var(--dim); font-size:14px; font-family:var(--serif); font-style:italic}
+  .kind{font-family:var(--mono); font-size:10px; letter-spacing:.08em; text-transform:uppercase; font-weight:600;
+    padding:3px 8px; border-radius:999px; border:1px solid var(--line2); white-space:nowrap}
+  .kind.read{color:var(--cyan); border-color:rgba(56,226,240,.30)}
+  .kind.settle{color:var(--gold2); border-color:var(--line2)}
+  .bar{height:5px; border-radius:3px; margin-top:9px; max-width:340px;
+    background:linear-gradient(90deg,var(--champ),var(--gold2)); box-shadow:0 0 12px -2px rgba(229,194,118,.55);
+    transition:width .8s cubic-bezier(.2,.8,.2,1)}
+  /* shimmer skeleton while first load runs */
+  .skel{height:14px; border-radius:6px; background:linear-gradient(90deg,rgba(150,170,235,.06),rgba(150,170,235,.14),rgba(150,170,235,.06)); background-size:200% 100%; animation:shimmer 1.4s infinite}
+  @keyframes shimmer{from{background-position:200% 0}to{background-position:-200% 0}}
+
+  footer{margin-top:40px; color:var(--faint); font-size:12px; line-height:1.8; text-align:center; border-top:1px solid var(--line); padding-top:24px}
+  footer code{color:var(--gold2); font-family:var(--mono)}
+  footer .colophon{font-family:var(--serif); font-style:italic; color:var(--dim); font-size:13px; margin-bottom:8px}
+  .err{color:#fca5a5}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="masthead">
+    <div class="kicker">Settled on Arc · USDC · No human in the loop</div>
+    <div class="nameplate">Lepton Press</div>
+    <div class="deck">The nanopayment paywall for the agentic web — a publisher paid in streamed USDC by the machines that read it, metered paragraph by paragraph.</div>
+    <div class="dbl-rule"><i></i><i></i></div>
+    <div class="dateline">
+      <span class="dl live"><span class="dot"></span> Live · Arc testnet</span>
+      <span class="sep">·</span>
+      <span class="dl">Publisher <b id="m-pub">…</b></span>
+      <span class="sep">·</span>
+      <span class="dl">StreamPay <a id="m-sp" target="_blank" rel="noopener">…</a></span>
+      <span class="sep">·</span>
+      <span class="dl">Edition <b id="m-upd">…</b></span>
+    </div>
+  </div>
+
+  <p class="lede">
+    <span class="drop">A card cannot charge a tenth of a cent.</span> The fee floor has kept the long tail of
+    writing economically invisible for thirty years. Below is a publisher earning in <b>streamed USDC</b> from
+    autonomous AI agents reading its work — a time-budget metered paragraph by paragraph and settled as the
+    agent's attention vests. Every figure is read live from on-chain settlements. No backend, no database. Just
+    the chain.
+  </p>
+  <div style="text-align:center;margin:-18px 0 36px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+    <a href="./replay.html" style="display:inline-flex;align-items:center;gap:9px;font-family:var(--mono);font-size:13px;font-weight:600;letter-spacing:.02em;text-decoration:none;color:#0a0a12;background:linear-gradient(100deg,var(--gold2),var(--champ));padding:13px 22px;border-radius:12px;box-shadow:0 14px 36px -18px rgba(245,196,81,.8)">🧠 Watch a real agent read →</a>
+    <a href="./value-chain.html" style="display:inline-flex;align-items:center;gap:9px;font-family:var(--mono);font-size:13px;font-weight:600;letter-spacing:.02em;text-decoration:none;color:var(--gold2);background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,0));border:1px solid var(--line2);padding:13px 22px;border-radius:12px">🧩 The two-hop agent economy →</a>
+  </div>
+
+  <!-- Hero: total revenue + sparkline -->
+  <div class="hero">
+    <div class="hero-grid">
+      <div>
+        <div class="k">Total publisher revenue</div>
+        <div class="big"><span class="cur">$</span><span id="c-rev">0.000000</span></div>
+        <div class="u"><b id="c-set2">—</b> paragraphs settled on-chain · <b id="c-rdr2">—</b> paying agents</div>
+        <!-- Revenue is two on-chain components, shown co-equally so the 27× split is legible
+             (not sweep-pumping): metered per-paragraph reads + the streamed time-budget the
+             publisher sweeps when the agent disengages. -->
+        <div class="revbreak" id="c-breakdown">
+          <div class="rb-row">
+            <div class="rb-item rb-metered">
+              <div class="rb-num" id="rb-metered">$0.000000</div>
+              <div class="rb-lbl">Metered proof-of-read <span class="rb-pct" id="rb-pct-metered">—</span></div>
+            </div>
+            <div class="rb-plus">+</div>
+            <div class="rb-item rb-sweep">
+              <div class="rb-num" id="rb-sweep">$0.000000</div>
+              <div class="rb-lbl">Engagement-time settlement <span class="rb-pct" id="rb-pct-sweep">—</span></div>
+            </div>
+          </div>
+          <div class="rb-bar"><i id="rb-bar-metered"></i><i id="rb-bar-sweep"></i></div>
+          <div class="rb-cap">A reader streams a time-budget in USDC and settles it paragraph by paragraph as proof-of-engagement; the publisher meters each read and sweeps the streamed remainder on disengagement. Both are real on-chain receipts to this address.</div>
+        </div>
+      </div>
+      <div class="spark-wrap">
+        <div class="spark-cap">Cumulative earnings</div>
+        <svg class="spark" id="spark" viewBox="0 0 400 108" preserveAspectRatio="none" aria-hidden="true">
+          <defs>
+            <linearGradient id="sparkline" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0" stop-color="#c79f57"/><stop offset=".5" stop-color="#f6e3ab"/><stop offset="1" stop-color="#e5c276"/>
+            </linearGradient>
+            <linearGradient id="sparkfill" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="rgba(229,194,118,.28)"/><stop offset="1" stop-color="rgba(229,194,118,0)"/>
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <!-- Stat trio -->
+  <div class="stats">
+    <div class="stat"><div class="k">Paragraphs sold</div><div class="v" id="c-set">—</div><div class="u">on-chain <code style="color:var(--faint)">withdraw()</code> settlements</div></div>
+    <div class="stat"><div class="k">Paying readers</div><div class="v cyan" id="c-rdr">—</div><div class="u">distinct agent streams</div></div>
+    <div class="stat"><div class="k">Avg / paragraph</div><div class="v gold" id="c-avg">—</div><div class="u">USDC per settlement</div></div>
+  </div>
+
+  <div class="panel">
+    <h2>Earnings by article <span class="tick"></span></h2>
+    <div id="by-article"><div class="empty"><span class="skel" style="display:inline-block;width:240px"></span></div></div>
+  </div>
+
+  <div class="panel">
+    <h2>Recent settlements <span class="tick"></span></h2>
+    <div id="settlements"><div class="empty"><span class="skel" style="display:inline-block;width:300px"></span></div></div>
+  </div>
+
+  <footer id="foot">
+    <div class="colophon">Lepton Press — printed by no one, settled by everyone.</div>
+    <span class="skel" style="display:inline-block;width:360px;height:11px"></span>
+  </footer>
+</div>
+
+<script type="module" src="./app.js"></script>
+</body>
+</html>

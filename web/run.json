@@ -1,0 +1,70 @@
+{
+  "article": "arc-nanopayments",
+  "title": "Why the smallest payment is the hardest one",
+  "task": "why can card networks not serve micropayments, and what changes it",
+  "judge": {
+    "mode": "heuristic"
+  },
+  "reader": "0x2e36F4037E711e1d4c853BBCBF7F526B3714A08a",
+  "publisher": "0xed13AA20701F503304bADB7697cbFD4d0C952Acf",
+  "streamId": "203",
+  "budgetUSDC": "0.020000",
+  "explorer": "https://testnet.arcscan.app/tx",
+  "steps": [
+    {
+      "n": 0,
+      "paidUSDC": "0.000112",
+      "tx": "0x1db828be3335253a53ebe677007458117a8b781387db9a1d6db2109ec79c7f1d",
+      "explorer": "https://testnet.arcscan.app/tx/0x1db828be3335253a53ebe677007458117a8b781387db9a1d6db2109ec79c7f1d",
+      "relevance": 20,
+      "worthPaying": true,
+      "judge": null,
+      "text": "For thirty years the web has had exactly one business model that pays writers reliably: bundle the work into something big enough to justify a card charge. A subscription, a course, a paywalled month. Anything cheaper than roughly fifty cents simply could not be sold, because the payment itself cost more than the thing being bought."
+    },
+    {
+      "n": 1,
+      "paidUSDC": "0.000128",
+      "tx": "0x82e990d830ac67a33e045b2a73ef8d1c61850e3ab18b18147b1248714889015b",
+      "explorer": "https://testnet.arcscan.app/tx/0x82e990d830ac67a33e045b2a73ef8d1c61850e3ab18b18147b1248714889015b",
+      "relevance": 40,
+      "worthPaying": true,
+      "judge": null,
+      "text": "That floor was never a law of nature. It was the cost of moving money through card networks: interchange, gateway fees, fraud reserves, chargeback risk. Those costs are fixed per transaction, so they crush small payments and vanish into large ones. The long tail of writing that is worth a tenth of a cent to a reader has been economically invisible the entire time."
+    },
+    {
+      "n": 2,
+      "paidUSDC": "0.000120",
+      "tx": "0xb640e6a647e95c10f86dba8a4208f79d2c47cdf9d5933015045c903dc96b1cfe",
+      "explorer": "https://testnet.arcscan.app/tx/0xb640e6a647e95c10f86dba8a4208f79d2c47cdf9d5933015045c903dc96b1cfe",
+      "relevance": 20,
+      "worthPaying": true,
+      "judge": null,
+      "text": "Stablecoins on a settlement-first chain change the arithmetic. When USDC is the native gas token and a block finalises in under a second, the marginal cost of a transfer collapses toward the gas itself. A payment of one millionth of a dollar stops being absurd and becomes routine. The smallest coin of antiquity, the lepton, finally has a digital equivalent."
+    },
+    {
+      "n": 3,
+      "paidUSDC": "0.000122",
+      "tx": "0xe1bc42c7c89344c41139763a1ddf7c3dd074b36dcfc5af0b012a02196bc3767b",
+      "explorer": "https://testnet.arcscan.app/tx/0xe1bc42c7c89344c41139763a1ddf7c3dd074b36dcfc5af0b012a02196bc3767b",
+      "relevance": 0,
+      "worthPaying": false,
+      "judge": null,
+      "text": "The first buyers of nanopaid content will not be humans clicking a tip jar. They will be agents: research bots, summarisers, retrieval pipelines that read thousands of sources and would happily pay each one a fraction of a cent rather than scrape it for free. Per-read settlement turns adversarial scraping into a market, and turns every paragraph into a metered good."
+    },
+    {
+      "n": 4,
+      "paidUSDC": "0.000112",
+      "tx": "0x01cdc765e2361a9b64512927c828ca74fb8812e5472453d897201c2f3b181629",
+      "explorer": "https://testnet.arcscan.app/tx/0x01cdc765e2361a9b64512927c828ca74fb8812e5472453d897201c2f3b181629",
+      "relevance": 0,
+      "worthPaying": false,
+      "judge": null,
+      "text": "What this needs is not a new token but a new toll booth: a way for a publisher to charge a machine per paragraph, prove the payment on chain, and release the text only after the money has actually vested. That is the whole of Lepton Press, and the rest of this article is the spec."
+    }
+  ],
+  "totals": {
+    "paragraphsPaidFor": 5,
+    "spentUSDC": "0.000594",
+    "stopReason": "task saturated — stopped paying"
+  }
+}

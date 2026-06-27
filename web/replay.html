@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; connect-src 'self'; img-src 'self' data:; object-src 'none'; base-uri 'none'; frame-ancestors 'none'" />
+<title>Lepton Press — watch an agent read</title>
+<meta name="color-scheme" content="dark" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,800;1,9..144,500&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#04050b; --bg2:#06080f; --panel:rgba(17,21,38,.5); --panel2:rgba(22,28,52,.7);
+    --line:rgba(150,170,235,.10); --line2:rgba(229,194,118,.24);
+    --ink:#f5f3ec; --dim:#a7b0cf; --faint:#6c769b; --cyan:#38e2f0;
+    --gold:#e5c276; --gold2:#f6e3ab; --champ:#c79f57; --green:#7fd99a; --red:#fca5a5;
+    --mono:"JetBrains Mono",ui-monospace,Menlo,monospace; --serif:"Fraunces",Georgia,serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    font-family:"Space Grotesk",ui-sans-serif,system-ui,sans-serif;
+    background:radial-gradient(130% 90% at 50% -12%, #0b1228 0%, var(--bg2) 42%, var(--bg) 100%) fixed;
+    color:var(--ink); min-height:100vh; -webkit-font-smoothing:antialiased;
+  }
+  body::before{content:"";position:fixed;inset:-50% -18% auto -18%;height:115vh;z-index:0;pointer-events:none;
+    background:radial-gradient(38% 52% at 20% 16%,rgba(91,147,255,.22),transparent 70%),radial-gradient(32% 44% at 80% 8%,rgba(229,194,118,.14),transparent 72%);
+    filter:blur(54px)}
+  .wrap{position:relative;z-index:1;max-width:880px;margin:0 auto;padding:44px 22px 90px}
+
+  .top{display:flex;align-items:center;gap:12px;margin-bottom:8px}
+  .brand{font-family:var(--mono);font-size:11px;letter-spacing:.4em;font-weight:700;text-transform:uppercase;
+    background:linear-gradient(90deg,var(--gold2),var(--champ));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .brand .mk{display:inline-block;width:7px;height:7px;margin-right:9px;transform:rotate(45deg);background:linear-gradient(135deg,var(--gold2),var(--gold));box-shadow:0 0 12px rgba(229,194,118,.7)}
+  .top a{margin-left:auto;font-size:12px;color:var(--cyan);text-decoration:none;font-family:var(--mono)}
+  .top a:hover{text-decoration:underline}
+
+  h1{font-family:var(--serif);font-weight:600;font-size:clamp(28px,5vw,46px);line-height:1.04;letter-spacing:-.018em;margin:14px 0 6px;max-width:20ch}
+  h1 em{font-style:italic;font-weight:800;background:linear-gradient(105deg,var(--gold2),var(--champ));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .lede{font-family:var(--serif);font-size:16px;color:var(--dim);line-height:1.55;max-width:62ch;margin-bottom:22px}
+
+  .meta{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px;font-size:12px}
+  .chip{background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,0));border:1px solid var(--line);color:var(--dim);padding:6px 12px;border-radius:999px;font-variant-numeric:tabular-nums}
+  .chip b{color:var(--ink);font-weight:600}
+  .chip a{color:var(--gold2);text-decoration:none;font-family:var(--mono)}
+  .chip.judge{border-color:rgba(56,226,240,.3);color:var(--cyan)}
+  .chip.sample{border-color:rgba(229,194,118,.4);color:var(--gold2)}
+
+  .taskbar{border:1px solid var(--line2);border-radius:16px;padding:16px 18px;margin:6px 0 22px;background:var(--panel2);
+    backdrop-filter:blur(14px)}
+  .taskbar .k{font-size:10.5px;color:var(--champ);letter-spacing:.16em;text-transform:uppercase;font-weight:600}
+  .taskbar .q{font-family:var(--serif);font-style:italic;font-size:18px;color:var(--ink);margin-top:6px}
+
+  .step{border:1px solid var(--line);border-radius:18px;padding:20px 22px;margin-bottom:16px;background:var(--panel);
+    backdrop-filter:blur(14px);overflow:hidden;animation:rise .5s cubic-bezier(.2,.8,.2,1)}
+  @keyframes rise{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:none}}
+  .step.stop{border-color:rgba(252,165,165,.3)}
+  .step .head{display:flex;align-items:center;gap:10px;margin-bottom:12px;font-size:12px;flex-wrap:wrap}
+  .pn{font-family:var(--mono);color:var(--faint);font-size:12px}
+  .paid{font-family:var(--mono);color:var(--gold2);font-weight:600;font-variant-numeric:tabular-nums}
+  .txlink{color:var(--cyan);text-decoration:none;font-family:var(--mono);font-size:12px;margin-left:auto}
+  .txlink:hover{text-decoration:underline}
+  .ptext{font-family:var(--serif);font-size:16px;line-height:1.6;color:#e9e6db}
+
+  .verdict{margin-top:14px;padding-top:14px;border-top:1px solid var(--line);display:grid;gap:8px}
+  .relrow{display:flex;align-items:center;gap:12px}
+  .relbar{flex:1;height:6px;border-radius:4px;background:rgba(150,170,235,.12);overflow:hidden}
+  .relbar i{display:block;height:100%;border-radius:4px;background:linear-gradient(90deg,var(--champ),var(--gold2));transition:width .7s cubic-bezier(.2,.8,.2,1)}
+  .relnum{font-family:var(--mono);font-size:12px;color:var(--dim);min-width:118px;text-align:right}
+  .judge{display:flex;gap:9px;align-items:flex-start;font-size:14px;color:var(--dim);line-height:1.5}
+  .judge .ic{flex-shrink:0}
+  .decision{font-family:var(--mono);font-size:11px;font-weight:700;letter-spacing:.06em;padding:3px 9px;border-radius:999px;text-transform:uppercase}
+  .decision.keep{color:var(--green);border:1px solid rgba(127,217,154,.35)}
+  .decision.stop{color:var(--red);border:1px solid rgba(252,165,165,.35)}
+
+  .controls{display:flex;align-items:center;gap:14px;margin-top:6px}
+  button{font-family:"Space Grotesk",sans-serif;font-size:15px;font-weight:600;cursor:pointer;border:none;border-radius:12px;
+    padding:14px 22px;color:#0a0a12;background:linear-gradient(100deg,var(--gold2),var(--champ));
+    box-shadow:0 14px 36px -18px rgba(229,194,118,.8);transition:transform .2s, opacity .2s}
+  button:hover:not(:disabled){transform:translateY(-2px)}
+  button:disabled{opacity:.4;cursor:default;box-shadow:none}
+  button.ghost{background:none;color:var(--dim);border:1px solid var(--line);box-shadow:none}
+  .hint{font-size:13px;color:var(--faint)}
+
+  .summary{border:1px solid var(--line2);border-radius:18px;padding:22px;margin-top:8px;background:
+    radial-gradient(120% 160% at 0% 0%, rgba(229,194,118,.14), transparent 55%), var(--panel2);
+    backdrop-filter:blur(16px);animation:rise .5s cubic-bezier(.2,.8,.2,1)}
+  .summary h3{font-family:var(--serif);font-size:22px;font-weight:600;margin-bottom:8px}
+  .summary p{color:var(--dim);font-size:14px;line-height:1.6}
+  .summary .nums{display:flex;gap:26px;margin-top:16px;flex-wrap:wrap}
+  .summary .nums div .v{font-family:var(--mono);font-size:24px;font-weight:700;color:var(--gold2)}
+  .summary .nums div .l{font-size:11px;color:var(--faint);letter-spacing:.1em;text-transform:uppercase;margin-top:4px}
+
+  footer{margin-top:34px;color:var(--faint);font-size:12px;line-height:1.7;text-align:center;border-top:1px solid var(--line);padding-top:20px}
+  footer code{color:var(--gold2);font-family:var(--mono)}
+  .err{color:var(--red)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top">
+    <span class="brand"><span class="mk"></span>Lepton Press</span>
+    <a id="dash" href="./index.html">Live revenue dashboard →</a>
+  </div>
+
+  <h1>Watch an agent <em>read</em>, paragraph by paragraph.</h1>
+  <p class="lede">
+    A real autonomous reader settled with this publisher paragraph by paragraph on Arc — judging each one against its
+    task and stopping the moment it stopped paying off. Step through the captured run below. Every
+    settlement is a real on-chain transaction; click any hash to verify it on arcscan. No wallet,
+    no keys, nothing to install.
+  </p>
+
+  <div class="meta" id="meta"></div>
+  <div class="taskbar" id="taskbar" hidden>
+    <div class="k">The agent's task</div>
+    <div class="q" id="task">…</div>
+  </div>
+
+  <div id="stream"></div>
+
+  <div class="controls" id="controls" hidden>
+    <button id="next">Buy the first paragraph →</button>
+    <button id="reset" class="ghost" hidden>Replay from the top</button>
+    <span class="hint" id="hint"></span>
+  </div>
+
+  <div id="summary"></div>
+
+  <footer id="foot"></footer>
+</div>
+
+<script type="module" src="./replay.js"></script>
+</body>
+</html>

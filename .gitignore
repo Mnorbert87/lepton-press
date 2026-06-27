@@ -1,0 +1,12 @@
+node_modules/
+.env
+.env.local
+*.log
+
+# keep referenced evidence logs (docs link to them)
+!runs/
+!runs/TRACTION_*.log
+
+# foundry build artifacts
+streampay/cache/
+streampay/out/

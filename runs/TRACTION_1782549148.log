@@ -1,0 +1,1558 @@
+── round 1/48  article=agent-reading-economics budget=0.020 giveup=3
+
+🤖 Reader agent — pays per paragraph on Arc, no human in the loop
+   address  0x2e36F4037E711e1d4c853BBCBF7F526B3714A08a
+   task     "how does an autonomous reader decide which paragraph to pay for"
+   judge    word-overlap heuristic (set ANTHROPIC_API_KEY for the LLM judge)
+   balance  $182.034889
+
+[1/4] BROWSE — GET /article/agent-reading-economics
+   "How an agent decides what to pay for" — 3 paragraphs, full price $0.000300
+   publisher 0xed13AA20701F503304bADB7697cbFD4d0C952Acf
+
+[2/4] FUND — StreamPay micro-stream: $0.020000 over 60s -> publisher
+   ✓ createStream  https://testnet.arcscan.app/tx/0x7be40028fb1b8e0f8a6cd0abfd477dead70aafdb26deb31da23dfd6b7b0d25af
+   stream #155 flowing at $0.000333/s
+
+[3/4] READ — paying per paragraph, stopping when it no longer pays off
+   ¶0: paid $0.000100  · relevance 60%  https://testnet.arcscan.app/tx/0xe21f3aacb431660e4f7f159df52be8f00ed29267d3c7eab8a0208d46c9aecbdf
+        "An autonomous reader does not consume an article the way a person does. It has a budget, a…"
+   ¶1: paid $0.000100  · relevance 20%  https://testnet.arcscan.app/tx/0x23143b794d451ba6d2838f1b3c030ed0a0dce24e1951ca025574c219476e27ef
+        "That makes pricing legible in a way human attention never is. A publisher can watch, trans…"
+   ¶2: paid $0.000100  · relevance 0%  https://testnet.arcscan.app/tx/0x14a6763f48f88a98b9e855bc63c0b1370e05850302f7011802ded913c3a0e0ea
+        "The settlement rail matters more than the model here. Streaming the payment per second of …"
+
+[4/4] SETTLE — cancel the stream, reclaim the unspent budget
+   reclaimable $0.014000
+   ✓ cancel stream #155  https://testnet.arcscan.app/tx/0xc539ddd709e2db9b61065f606d55233bf717637d8ee2e59c15bb7a57c9a5b036
+
+✅ read 3 paragraph(s), paid $0.000300 total, autonomously, on Arc.
+   balance $182.022277 — every paragraph release was a live StreamPay settlement.
+
+── round 2/48  article=arc-nanopayments budget=0.030 giveup=2
+
+🤖 Reader agent — pays per paragraph on Arc, no human in the loop
+   address  0x2e36F4037E711e1d4c853BBCBF7F526B3714A08a
+   task     "how do stablecoins on a settlement-first chain change payment economics"
+   judge    word-overlap heuristic (set ANTHROPIC_API_KEY for the LLM judge)
+   balance  $182.022277
+
+[1/4] BROWSE — GET /article/arc-nanopayments
+   "Why the smallest payment is the hardest one" — 5 paragraphs, full price $0.000594
+   publisher 0xed13AA20701F503304bADB7697cbFD4d0C952Acf
+
+[2/4] FUND — StreamPay micro-stream: $0.030000 over 60s -> publisher
+   ✓ createStream  https://testnet.arcscan.app/tx/0x4b458028a5bc6c04c8c712e7b7e2404b499f94ed092042631715bd1525ab7e5a
+   stream #156 flowing at $0.000500/s
+
+[3/4] READ — paying per paragraph, stopping when it no longer pays off
+   ¶0: paid $0.000112  · relevance 14%  https://testnet.arcscan.app/tx/0x7d22a283aa315bad87c1604e8f98e9eca9e8cb734fd9285dcdcd0e8eda91079c
+        "For thirty years the web has had exactly one business model that pays writers reliably: bu…"
+   ¶1: paid $0.000128  · relevance 29%  https://testnet.arcscan.app/tx/0x658360a180066e48a545449052f14eee208cb0295a7d7b71b38b30294f0bb36e
+        "That floor was never a law of nature. It was the cost of moving money through card network…"
+   ¶2: paid $0.000120  · relevance 86%  https://testnet.arcscan.app/tx/0x87a9a6cdd6d043cb472c296e09ba3e0e5abcbecc302dde0f2b598e1d5e86c61c
+        "Stablecoins on a settlement-first chain change the arithmetic. When USDC is the native gas…"
+   ¶3: paid $0.000122  · relevance 29%  https://testnet.arcscan.app/tx/0x5a70dfce40f8c2dbf1090094d662fe050a3edef031882c1cf2ea2e8ede979b94
+        "The first buyers of nanopaid content will not be humans clicking a tip jar. They will be a…"
+   ¶4: paid $0.000112  · relevance 29%  https://testnet.arcscan.app/tx/0xbc2e65508f5bd41e198af60f240a8653e2ecc09785c61b5034e2bf48ddc9a1de
+        "What this needs is not a new token but a new toll booth: a way for a publisher to charge a…"
+
+[4/4] SETTLE — cancel the stream, reclaim the unspent budget
+   reclaimable $0.015500
+   ✓ cancel stream #156  https://testnet.arcscan.app/tx/0x5116fcb2bdaa087d9415cca304d7230dc9bcd76f26e42329871d33a0b5a647c5
+
+✅ read 5 paragraph(s), paid $0.000594 total, autonomously, on Arc.
+   balance $182.001342 — every paragraph release was a live StreamPay settlement.
+
+── round 3/48  article=agent-reading-economics budget=0.040 giveup=3
+
+🤖 Reader agent — pays per paragraph on Arc, no human in the loop
+   address  0x2e36F4037E711e1d4c853BBCBF7F526B3714A08a
+   task     "why is streaming payment per second better than charging per article"
+   judge    word-overlap heuristic (set ANTHROPIC_API_KEY for the LLM judge)
+   balance  $182.001342
+
+[1/4] BROWSE — GET /article/agent-reading-economics
+   "How an agent decides what to pay for" — 3 paragraphs, full price $0.000300
+   publisher 0xed13AA20701F503304bADB7697cbFD4d0C952Acf
+
+[2/4] FUND — StreamPay micro-stream: $0.040000 over 60s -> publisher
+   ✓ createStream  https://testnet.arcscan.app/tx/0x8291f9ee9ff9f7fc69913b92f85fad6e82c01f7d11c2fd44002f9d455957c881
+   stream #157 flowing at $0.000666/s
+
+[3/4] READ — paying per paragraph, stopping when it no longer pays off
+   ¶0: paid $0.000100  · relevance 14%  https://testnet.arcscan.app/tx/0xa757d4949b2c366a56f48ed70bcc70bcce8eeda08924caa9d59e96f208f72e8c
+        "An autonomous reader does not consume an article the way a person does. It has a budget, a…"
+   ¶1: paid $0.000100  · relevance 0%  https://testnet.arcscan.app/tx/0x12beba8a2c2493ac4761b9e17d3894e902f710047f26dc52f2591a6931fa52be
+        "That makes pricing legible in a way human attention never is. A publisher can watch, trans…"
+   ¶2: paid $0.000100  · relevance 86%  https://testnet.arcscan.app/tx/0x8aae8fc8b9fde4e62feda6ab3070367437c5bd5b19ad7d9cc7ef8d99287f0787
+        "The settlement rail matters more than the model here. Streaming the payment per second of …"
+
+[4/4] SETTLE — cancel the stream, reclaim the unspent budget
+   reclaimable $0.027334
+   ✓ cancel stream #157  https://testnet.arcscan.app/tx/0x519be92d57edc8734be4b4e49f99cfc2455e711f635e7e0fa0bf41a13730153b
+
+✅ read 3 paragraph(s), paid $0.000300 total, autonomously, on Arc.
+   balance $181.982063 — every paragraph release was a live StreamPay settlement.
+
+── round 4/48  article=arc-nanopayments budget=0.050 giveup=2
+
+🤖 Reader agent — pays per paragraph on Arc, no human in the loop
+   address  0x2e36F4037E711e1d4c853BBCBF7F526B3714A08a
+   task     "who are the first buyers of nanopaid content and why"
+   judge    word-overlap heuristic (set ANTHROPIC_API_KEY for the LLM judge)
+   balance  $181.982063
+
+[1/4] BROWSE — GET /article/arc-nanopayments
+   "Why the smallest payment is the hardest one" — 5 paragraphs, full price $0.000594
+   publisher 0xed13AA20701F503304bADB7697cbFD4d0C952Acf
+
+[2/4] FUND — StreamPay micro-stream: $0.050000 over 60s -> publisher
+   ✓ createStream  https://testnet.arcscan.app/tx/0x9cbe03c4c6df6344cc5a99384fd29cc420ac8f48395b37478ae9d8f2766caf5a
+   stream #158 flowing at $0.000833/s
+
+[3/4] READ — paying per paragraph, stopping when it no longer pays off
+   ¶0: paid $0.000112  · relevance 0%  https://testnet.arcscan.app/tx/0xa9cd3a95ab5603c4eed69b7b1164a4c572f881b05ad7f5c5ce7456ff8531f051
+        "For thirty years the web has had exactly one business model that pays writers reliably: bu…"
+   ¶1: paid $0.000128  · relevance 0%  https://testnet.arcscan.app/tx/0xcc6ae29f5c276503eda88eb10c7b39b41cc44a6abe3f614b1c2e34b8d3375de9
+        "That floor was never a law of nature. It was the cost of moving money through card network…"
+   · 2 cold paragraph(s) — task saturated, stop.
+
+[4/4] SETTLE — cancel the stream, reclaim the unspent budget
+   reclaimable $0.038334
+   ✓ cancel stream #158  https://testnet.arcscan.app/tx/0x2c58fafa98d28718436224559690ec5c28c51302077aac87d8c8a33b07c1c097
+
+✅ read 2 paragraph(s), paid $0.000240 total, autonomously, on Arc.
+   balance $181.963628 — every paragraph release was a live StreamPay settlement.
+
+── round 5/48  article=agent-reading-economics budget=0.010 giveup=3
+
+🤖 Reader agent — pays per paragraph on Arc, no human in the loop
+   address  0x2e36F4037E711e1d4c853BBCBF7F526B3714A08a
+   task     "what can a publisher learn from per-transaction reading data"
+   judge    word-overlap heuristic (set ANTHROPIC_API_KEY for the LLM judge)
+   balance  $181.963628
+
+[1/4] BROWSE — GET /article/agent-reading-economics
+   "How an agent decides what to pay for" — 3 paragraphs, full price $0.000300
+   publisher 0xed13AA20701F503304bADB7697cbFD4d0C952Acf
+
+[2/4] FUND — StreamPay micro-stream: $0.010000 over 60s -> publisher
+   ✓ createStream  https://testnet.arcscan.app/tx/0xf3d259293d57f0b899bfa4cf1f97ed7ecf965b9bcdda72954e6a1e5a5aec2835
+   stream #159 flowing at $0.000166/s
+
+[3/4] READ — paying per paragraph, stopping when it no longer pays off
+   ¶0: paid $0.000100  · relevance 0%  https://testnet.arcscan.app/tx/0x086fb72b9fa0590a4b31f2e12fdd6ad961c8530561f859ab5243144832a3022d
+        "An autonomous reader does not consume an article the way a person does. It has a budget, a…"
+   ¶1: paid $0.000100  · relevance 50%  https://testnet.arcscan.app/tx/0x22cfb15954ecd8cc1ee11124a781a071a8787d28d523eb14aeae09b00a487552
+        "That makes pricing legible in a way human attention never is. A publisher can watch, trans…"
+   ¶2: paid $0.000100  · relevance 50%  https://testnet.arcscan.app/tx/0x8b6c92d50a92c1a9a0cca4f3032a6e22a0672cee39a2651550084857f632b2e9
+        "The settlement rail matters more than the model here. Streaming the payment per second of …"
+
+[4/4] SETTLE — cancel the stream, reclaim the unspent budget
+   reclaimable $0.006834
+   ✓ cancel stream #159  https://testnet.arcscan.app/tx/0x3f2e0be692f86ab891bc5497e3d8bb58107fa6685b065e2a3bcdf835245dd04e
+
+✅ read 3 paragraph(s), paid $0.000300 total, autonomously, on Arc.
+   balance $181.954516 — every paragraph release was a live StreamPay settlement.
+
+── round 6/48  article=arc-nanopayments budget=0.020 giveup=2
+
+🤖 Reader agent — pays per paragraph on Arc, no human in the loop
+   address  0x2e36F4037E711e1d4c853BBCBF7F526B3714A08a
+   task     "what does a publisher need to charge a machine per paragraph"
+   judge    word-overlap heuristic (set ANTHROPIC_API_KEY for the LLM judge)
+   balance  $181.954516
+
+[1/4] BROWSE — GET /article/arc-nanopayments
+   "Why the smallest payment is the hardest one" — 5 paragraphs, full price $0.000594
+   publisher 0xed13AA20701F503304bADB7697cbFD4d0C952Acf
+
+[2/4] FUND — StreamPay micro-stream: $0.020000 over 60s -> publisher
+   ✓ createStream  https://testnet.arcscan.app/tx/0xbfb166a3cbf5c866235da62ef8287ad2da59b21ac2f34f3540771034abfea2f0
+   stream #160 flowing at $0.000333/s
+
+[3/4] READ — paying per paragraph, stopping when it no longer pays off
+   ¶0: paid $0.000112  · relevance 17%  https://testnet.arcscan.app/tx/0x5e8ccbddd33ea12e0ca9f9aa4a153628930bfeafd44e83bf854d15b871f08e10
+        "For thirty years the web has had exactly one business model that pays writers reliably: bu…"
+   ¶1: paid $0.000128  · relevance 33%  https://testnet.arcscan.app/tx/0xac4618322ce6c37cb497b3916bf1c7cfb066668610655c1a994a572d942de6ce
+        "That floor was never a law of nature. It was the cost of moving money through card network…"
+   ¶2: paid $0.000120  · relevance 0%  https://testnet.arcscan.app/tx/0x2576823030cb0173004f184e3ab366cb8eb62341119757d8c97b2e140ffea1dc
+        "Stablecoins on a settlement-first chain change the arithmetic. When USDC is the native gas…"
+   ¶3: paid $0.000122  · relevance 33%  https://testnet.arcscan.app/tx/0x5b4572ea3d58b2d5bd3bbac71d89ef73889b52de39fbbff1a7c6a49f3b6dfb42
+        "The first buyers of nanopaid content will not be humans clicking a tip jar. They will be a…"
+   ¶4: paid $0.000112  · relevance 100%  https://testnet.arcscan.app/tx/0xb580f72752d8560edc9b1b4303904a138f0bf6c8ea7829c4f40c4c830d6eceac
+        "What this needs is not a new token but a new toll booth: a way for a publisher to charge a…"
+
+[4/4] SETTLE — cancel the stream, reclaim the unspent budget
+   reclaimable $0.010667
+   ✓ cancel stream #160  https://testnet.arcscan.app/tx/0x2ec19d1066379a47b185f1f8f82806a32fd6e7958f22d5422ad95f29beddbc26
+
+✅ read 5 paragraph(s), paid $0.000594 total, autonomously, on Arc.
+   balance $181.938581 — every paragraph release was a live StreamPay settlement.
+
+── round 7/48  article=agent-reading-economics budget=0.030 giveup=3
+
+🤖 Reader agent — pays per paragraph on Arc, no human in the loop
+   address  0x2e36F4037E711e1d4c853BBCBF7F526B3714A08a
+   task     "how does an autonomous reader decide which paragraph to pay for"
+   judge    word-overlap heuristic (set ANTHROPIC_API_KEY for the LLM judge)
+   balance  $181.938581
+
+[1/4] BROWSE — GET /article/agent-reading-economics
+   "How an agent decides what to pay for" — 3 paragraphs, full price $0.000300
+   publisher 0xed13AA20701F503304bADB7697cbFD4d0C952Acf
+
+[2/4] FUND — StreamPay micro-stream: $0.030000 over 60s -> publisher
+   ✓ createStream  https://testnet.arcscan.app/tx/0x33ad8c578db73552160dce4e641a2e3e088d2f2d8d4601621d38049d0772fb21
+   stream #161 flowing at $0.000500/s
+
+[3/4] READ — paying per paragraph, stopping when it no longer pays off
+   ¶0: paid $0.000100  · relevance 60%  https://testnet.arcscan.app/tx/0x073d7a570a9f5610f9d59cbb622c19508275a6f45762c34fd473ffbf8c9ff910
+        "An autonomous reader does not consume an article the way a person does. It has a budget, a…"
+   ¶1: paid $0.000100  · relevance 20%  https://testnet.arcscan.app/tx/0x8393491b041791237102f3f730269e813f579f181bf80012f22e33b1359ccfda
+        "That makes pricing legible in a way human attention never is. A publisher can watch, trans…"
+   ¶2: paid $0.000100  · relevance 0%  https://testnet.arcscan.app/tx/0x1ffcf427460d68f9450852622a537ebd29cf38b5b179137fe58f45807412d9a8
+        "The settlement rail matters more than the model here. Streaming the payment per second of …"
+
+[4/4] SETTLE — cancel the stream, reclaim the unspent budget
+   reclaimable $0.020500
+   ✓ cancel stream #161  https://testnet.arcscan.app/tx/0xf5f34c0fbceab931b8aae5886f075dddc652808817be1e9577d9caab9534d887
+
+✅ read 3 paragraph(s), paid $0.000300 total, autonomously, on Arc.
+   balance $181.922636 — every paragraph release was a live StreamPay settlement.
+
+── round 8/48  article=arc-nanopayments budget=0.040 giveup=2
+
+🤖 Reader agent — pays per paragraph on Arc, no human in the loop
+   address  0x2e36F4037E711e1d4c853BBCBF7F526B3714A08a
+   task     "why does the card fee floor make the long tail of writing invisible"
+   judge    word-overlap heuristic (set ANTHROPIC_API_KEY for the LLM judge)
+   balance  $181.922636
+
+[1/4] BROWSE — GET /article/arc-nanopayments
+   "Why the smallest payment is the hardest one" — 5 paragraphs, full price $0.000594
+   publisher 0xed13AA20701F503304bADB7697cbFD4d0C952Acf
+
+[2/4] FUND — StreamPay micro-stream: $0.040000 over 60s -> publisher
+   ✓ createStream  https://testnet.arcscan.app/tx/0xf27c69331728165d934c6638b5978422cde64a48d5d808e86a855f1530177c10
+   stream #162 flowing at $0.000666/s
+
+[3/4] READ — paying per paragraph, stopping when it no longer pays off
+   ¶0: paid $0.000112  · relevance 13%  https://testnet.arcscan.app/tx/0x83d0f7a6d4bd256c7baab927fa421042e196c65c1025b4983f20c56872417dda
+        "For thirty years the web has had exactly one business model that pays writers reliably: bu…"
+   ¶1: paid $0.000128  · relevance 75%  https://testnet.arcscan.app/tx/0xfc406ce7f092e894fb4c507d28dd281763c8525e613c87e21d2270b0f6b37279
+        "That floor was never a law of nature. It was the cost of moving money through card network…"
+   ¶2: paid $0.000120  · relevance 0%  https://testnet.arcscan.app/tx/0x73d32942813ad68c54d27e643b0f131d920b2164cb7c3c5d54c16c98f907aaaf
+        "Stablecoins on a settlement-first chain change the arithmetic. When USDC is the native gas…"
+   ¶3: paid $0.000122  · relevance 0%  https://testnet.arcscan.app/tx/0xbb1bfa2eea309ccd9370df2072e1d66592d73ec91b24939415a0bc65cbfe5b9d
+        "The first buyers of nanopaid content will not be humans clicking a tip jar. They will be a…"
+   · 2 cold paragraph(s) — task saturated, stop.
+
+[4/4] SETTLE — cancel the stream, reclaim the unspent budget
+   reclaimable $0.024000
+   ✓ cancel stream #162  https://testnet.arcscan.app/tx/0xfe08532b8aab3b6a38ae25c2c5caa4e67cba318bd8729ace925c03ab6c5acb21
+
+✅ read 4 paragraph(s), paid $0.000482 total, autonomously, on Arc.
+   balance $181.900035 — every paragraph release was a live StreamPay settlement.
+
+── round 9/48  article=agent-reading-economics budget=0.050 giveup=3
+
+🤖 Reader agent — pays per paragraph on Arc, no human in the loop
+   address  0x2e36F4037E711e1d4c853BBCBF7F526B3714A08a
+   task     "why is streaming payment per second better than charging per article"
+   judge    word-overlap heuristic (set ANTHROPIC_API_KEY for the LLM judge)
+   balance  $181.900035
+
+[1/4] BROWSE — GET /article/agent-reading-economics
+   "How an agent decides what to pay for" — 3 paragraphs, full price $0.000300
+   publisher 0xed13AA20701F503304bADB7697cbFD4d0C952Acf
+
+[2/4] FUND — StreamPay micro-stream: $0.050000 over 60s -> publisher
+   ✓ createStream  https://testnet.arcscan.app/tx/0x0a29ad4f1765738d59d60c3bd74566d2c08a08164b01fb41c3b9ee59c90c5f9b
+   stream #163 flowing at $0.000833/s
+
+[3/4] READ — paying per paragraph, stopping when it no longer pays off
+   ¶0: paid $0.000100  · relevance 14%  https://testnet.arcscan.app/tx/0x013b96bf070077c8a34fe3d0bc11f0f49e4951b3d8b29978c546d0521cfd750d
+        "An autonomous reader does not consume an article the way a person does. It has a budget, a…"
+   ¶1: paid $0.000100  · relevance 0%  https://testnet.arcscan.app/tx/0x51fae00eb4ba6672bca44c2f98278fa6653cbaed594cc2dd6fc717ff5736205c
+        "That makes pricing legible in a way human attention never is. A publisher can watch, trans…"
+   ¶2: paid $0.000100  · relevance 86%  https://testnet.arcscan.app/tx/0x41c0a8ca49ca2dec6a4ebd6f5498c465247bc4ac1a5b23b559cee69809f5caf9
+        "The settlement rail matters more than the model here. Streaming the payment per second of …"
+
+[4/4] SETTLE — cancel the stream, reclaim the unspent budget
+   reclaimable $0.034167
+   ✓ cancel stream #163  https://testnet.arcscan.app/tx/0x0d14dae0c02ee14e90f77befb129391eca3ee95982411a2267183369ac71d4f7
+
+✅ read 3 paragraph(s), paid $0.000300 total, autonomously, on Arc.
+   balance $181.877423 — every paragraph release was a live StreamPay settlement.
+
+── round 10/48  article=arc-nanopayments budget=0.010 giveup=2
+
+🤖 Reader agent — pays per paragraph on Arc, no human in the loop
+   address  0x2e36F4037E711e1d4c853BBCBF7F526B3714A08a
+   task     "why can card networks not serve micropayments, and what changes it"
+   judge    word-overlap heuristic (set ANTHROPIC_API_KEY for the LLM judge)
+   balance  $181.877423
+
+[1/4] BROWSE — GET /article/arc-nanopayments
+   "Why the smallest payment is the hardest one" — 5 paragraphs, full price $0.000594
+   publisher 0xed13AA20701F503304bADB7697cbFD4d0C952Acf
+
+[2/4] FUND — StreamPay micro-stream: $0.010000 over 60s -> publisher
+   ✓ createStream  https://testnet.arcscan.app/tx/0xe13d9d337f482bde6f249f8ac4f430196ccaa38f17ddf1dc33958d25a6b545cd
+   stream #164 flowing at $0.000166/s
+
+[3/4] READ — paying per paragraph, stopping when it no longer pays off
+   ¶0: paid $0.000112  · relevance 20%  https://testnet.arcscan.app/tx/0x19d96547482cf5e7a826ef81feef97a84af52c5088a9618667d7d63502746f38
+        "For thirty years the web has had exactly one business model that pays writers reliably: bu…"
+   ¶1: paid $0.000128  · relevance 40%  https://testnet.arcscan.app/tx/0x8d20d5a3a327177db7384a441ed8d6bc2414699c468c0a003c65c780c1c73d2d
+        "That floor was never a law of nature. It was the cost of moving money through card network…"
+   ¶2: paid $0.000120  · relevance 20%  https://testnet.arcscan.app/tx/0x9a056b8042a9d304a8b77acba3cbef3f43bf7cc4aa77d5b33199764d8216e0f1
+        "Stablecoins on a settlement-first chain change the arithmetic. When USDC is the native gas…"
+   ¶3: paid $0.000122  · relevance 0%  https://testnet.arcscan.app/tx/0xb9cc6e3d7547d56fd73a06529a7e4111584e48a1cda3aeed6687b8f51c588755
+        "The first buyers of nanopaid content will not be humans clicking a tip jar. They will be a…"
+   ¶4: paid $0.000112  · relevance 0%  https://testnet.arcscan.app/tx/0xc346680a7a8015a040f042c52611747e6eb58bcd899813db143623b38c594bb0
+        "What this needs is not a new token but a new toll booth: a way for a publisher to charge a…"
+   · 2 cold paragraph(s) — task saturated, stop.
+
+[4/4] SETTLE — cancel the stream, reclaim the unspent budget
+   reclaimable $0.005334
+   ✓ cancel stream #164  https://testnet.arcscan.app/tx/0x77e3aed329d7bac79d59c0fdc9bb220ee4206655d388ef0f37cdfbe5367032c1
+
+✅ read 5 paragraph(s), paid $0.000594 total, autonomously, on Arc.
+   balance $181.866655 — every paragraph release was a live StreamPay settlement.
+
+── round 11/48  article=agent-reading-economics budget=0.020 giveup=3
+
+🤖 Reader agent — pays per paragraph on Arc, no human in the loop
+   address  0x2e36F4037E711e1d4c853BBCBF7F526B3714A08a
+   task     "what can a publisher learn from per-transaction reading data"
+   judge    word-overlap heuristic (set ANTHROPIC_API_KEY for the LLM judge)
+   balance  $181.866655
+
+[1/4] BROWSE — GET /article/agent-reading-economics
+   "How an agent decides what to pay for" — 3 paragraphs, full price $0.000300
+   publisher 0xed13AA20701F503304bADB7697cbFD4d0C952Acf
+
+[2/4] FUND — StreamPay micro-stream: $0.020000 over 60s -> publisher
+   ✓ createStream  https://testnet.arcscan.app/tx/0xc215ea10d636bb122a91b76b47584e8a3e477281b043e9bb0ea8cae9acde4388
+   stream #165 flowing at $0.000333/s
+
+[3/4] READ — paying per paragraph, stopping when it no longer pays off
+   ¶0: paid $0.000100  · relevance 0%  https://testnet.arcscan.app/tx/0xcf2301c02ad08fd0b84ae378ad167dbb25a9617f15c68c5c0e3791711bf340bd
+        "An autonomous reader does not consume an article the way a person does. It has a budget, a…"
+   ¶1: paid $0.000100  · relevance 50%  https://testnet.arcscan.app/tx/0x3a1cf5b48154c82b296912e0b3f0a08e96211a0c63c70be9913b62f5326873d1
+        "That makes pricing legible in a way human attention never is. A publisher can watch, trans…"
+   ¶2: paid $0.000100  · relevance 50%  https://testnet.arcscan.app/tx/0xe0f587d73719c8ac7c68ec9568f029eb613dedb30544c575b80a0c40af9f4b24
+        "The settlement rail matters more than the model here. Streaming the payment per second of …"
+
+[4/4] SETTLE — cancel the stream, reclaim the unspent budget
+   reclaimable $0.014000
+   ✓ cancel stream #165  https://testnet.arcscan.app/tx/0xdecb42e37ac0b609ae74e7a612994e81b133fa2e81f9c2ef7fb424d51c6c2423
+
+✅ read 3 paragraph(s), paid $0.000300 total, autonomously, on Arc.
+   balance $181.854043 — every paragraph release was a live StreamPay settlement.
+
+── round 12/48  article=arc-nanopayments budget=0.030 giveup=2
+
+🤖 Reader agent — pays per paragraph on Arc, no human in the loop
+   address  0x2e36F4037E711e1d4c853BBCBF7F526B3714A08a
+   task     "how do stablecoins on a settlement-first chain change payment economics"
+   judge    word-overlap heuristic (set ANTHROPIC_API_KEY for the LLM judge)
+   balance  $181.854043
+
+[1/4] BROWSE — GET /article/arc-nanopayments
+   "Why the smallest payment is the hardest one" — 5 paragraphs, full price $0.000594
+   publisher 0xed13AA20701F503304bADB7697cbFD4d0C952Acf
+
+[2/4] FUND — StreamPay micro-stream: $0.030000 over 60s -> publisher
+   ✓ createStream  https://testnet.arcscan.app/tx/0x96eb9b3d65a7b78b32d2bac2f87f007cb92f05e65cd9835f130460e5611c164b
+   stream #166 flowing at $0.000500/s
+
+[3/4] READ — paying per paragraph, stopping when it no longer pays off
+   ¶0: paid $0.000112  · relevance 14%  https://testnet.arcscan.app/tx/0x728606c11e0b616fcd48a722d46eff0661761661ef7fd05fbe5d2960a3a39f6f
+        "For thirty years the web has had exactly one business model that pays writers reliably: bu…"
+   ¶1: paid $0.000128  · relevance 29%  https://testnet.arcscan.app/tx/0x535678a6a094e47b6bd999de17424616daad4decd3e22bba264616bfb6124e65
+        "That floor was never a law of nature. It was the cost of moving money through card network…"
+   ¶2: paid $0.000120  · relevance 86%  https://testnet.arcscan.app/tx/0xc817fbafdf15c3d9b743f8105ed0f8bb79853fde8468779cb324822beab99d74
+        "Stablecoins on a settlement-first chain change the arithmetic. When USDC is the native gas…"
+   ¶3: paid $0.000122  · relevance 29%  https://testnet.arcscan.app/tx/0x7df17c749a4337d195085e5d45349be7bbb9fd651cf393314e1c6ea6e9d2a732
+        "The first buyers of nanopaid content will not be humans clicking a tip jar. They will be a…"
+   ¶4: paid $0.000112  · relevance 29%  https://testnet.arcscan.app/tx/0x082bbcfbaaeeb011f804ad3bfca8cd7e743067e001ad03f691afd9df81b3eb78
+        "What this needs is not a new token but a new toll booth: a way for a publisher to charge a…"
+
+[4/4] SETTLE — cancel the stream, reclaim the unspent budget
+   reclaimable $0.015500
+   ✓ cancel stream #166  https://testnet.arcscan.app/tx/0x40b443d336f876ee0904cb59d4db05e908043c5d0aba55d4e506b4a1a04c5847
+
+✅ read 5 paragraph(s), paid $0.000594 total, autonomously, on Arc.
+   balance $181.833135 — every paragraph release was a live StreamPay settlement.
+
+── round 13/48  article=agent-reading-economics budget=0.040 giveup=3
+
+🤖 Reader agent — pays per paragraph on Arc, no human in the loop
+   address  0x2e36F4037E711e1d4c853BBCBF7F526B3714A08a
+   task     "how does an autonomous reader decide which paragraph to pay for"
+   judge    word-overlap heuristic (set ANTHROPIC_API_KEY for the LLM judge)
+   balance  $181.833135
+
+[1/4] BROWSE — GET /article/agent-reading-economics
+   "How an agent decides what to pay for" — 3 paragraphs, full price $0.000300
+   publisher 0xed13AA20701F503304bADB7697cbFD4d0C952Acf
+
+[2/4] FUND — StreamPay micro-stream: $0.040000 over 60s -> publisher
+   ✓ createStream  https://testnet.arcscan.app/tx/0xdb01a4da3cb1625d8cad8477d33977211be2c923f387b2e8b304ee5cf7610d19
+   stream #167 flowing at $0.000666/s
+
+[3/4] READ — paying per paragraph, stopping when it no longer pays off
+   ¶0: paid $0.000100  · relevance 60%  https://testnet.arcscan.app/tx/0xc271b82bb32fe96d01cee8a453fda99794d854ec0b2ef60bcf36a4ebb8f93591
+        "An autonomous reader does not consume an article the way a person does. It has a budget, a…"
+   ¶1: paid $0.000100  · relevance 20%  https://testnet.arcscan.app/tx/0x3dff26e5dbaeee030e3b64581c00184077a9a3bd6c12172c980063fd7d859b8f
+        "That makes pricing legible in a way human attention never is. A publisher can watch, trans…"
+   ¶2: paid $0.000100  · relevance 0%  https://testnet.arcscan.app/tx/0xda2022bd6e7eaea91699d2dd0828c59ff583a73d366cb3a57c377a794958dcdc
+        "The settlement rail matters more than the model here. Streaming the payment per second of …"
+
+[4/4] SETTLE — cancel the stream, reclaim the unspent budget
+   reclaimable $0.027334
+   ✓ cancel stream #167  https://testnet.arcscan.app/tx/0xcd1b8e7545972244f0c7981617645f1cd54cb2ab3146a7094aa6ca2a5fa57aa6
+
+✅ read 3 paragraph(s), paid $0.000300 total, autonomously, on Arc.
+   balance $181.813933 — every paragraph release was a live StreamPay settlement.
+
+── round 14/48  article=arc-nanopayments budget=0.050 giveup=2
+
+🤖 Reader agent — pays per paragraph on Arc, no human in the loop
+   address  0x2e36F4037E711e1d4c853BBCBF7F526B3714A08a
+   task     "who are the first buyers of nanopaid content and why"
+   judge    word-overlap heuristic (set ANTHROPIC_API_KEY for the LLM judge)
+   balance  $181.813933
+
+[1/4] BROWSE — GET /article/arc-nanopayments
+   "Why the smallest payment is the hardest one" — 5 paragraphs, full price $0.000594
+   publisher 0xed13AA20701F503304bADB7697cbFD4d0C952Acf
+
+[2/4] FUND — StreamPay micro-stream: $0.050000 over 60s -> publisher
+   ✓ createStream  https://testnet.arcscan.app/tx/0x96df5cc23aae0fce502c64498e9e7750642cb1dde5b6fa494d77777c3c994ab0
+   stream #168 flowing at $0.000833/s
+
+[3/4] READ — paying per paragraph, stopping when it no longer pays off
+   ¶0: paid $0.000112  · relevance 0%  https://testnet.arcscan.app/tx/0x1da5958409fd6fc037d41fe8f144b8861480e4df0d57f64f71a99a3d5430aac8
+        "For thirty years the web has had exactly one business model that pays writers reliably: bu…"
+   ¶1: paid $0.000128  · relevance 0%  https://testnet.arcscan.app/tx/0xf36d48ab0e5f4f12b3f9a475284e08f55ae22c2449950c850b5d0fe13fcb5ec1
+        "That floor was never a law of nature. It was the cost of moving money through card network…"
+   · 2 cold paragraph(s) — task saturated, stop.
+
+[4/4] SETTLE — cancel the stream, reclaim the unspent budget
+   reclaimable $0.038334
+   ✓ cancel stream #168  https://testnet.arcscan.app/tx/0x84c5bda277b11a72ec3165ef171ac5b78e6d5a2f723156787a6e999c1677e2da
+
+✅ read 2 paragraph(s), paid $0.000240 total, autonomously, on Arc.
+   balance $181.795574 — every paragraph release was a live StreamPay settlement.
+
+── round 15/48  article=agent-reading-economics budget=0.010 giveup=3
+
+🤖 Reader agent — pays per paragraph on Arc, no human in the loop
+   address  0x2e36F4037E711e1d4c853BBCBF7F526B3714A08a
+   task     "why is streaming payment per second better than charging per article"
+   judge    word-overlap heuristic (set ANTHROPIC_API_KEY for the LLM judge)
+   balance  $181.795574
+
+[1/4] BROWSE — GET /article/agent-reading-economics
+   "How an agent decides what to pay for" — 3 paragraphs, full price $0.000300
+   publisher 0xed13AA20701F503304bADB7697cbFD4d0C952Acf
+
+[2/4] FUND — StreamPay micro-stream: $0.010000 over 60s -> publisher
+   ✓ createStream  https://testnet.arcscan.app/tx/0xc4025cf1724ff22a847a58508df929333c524eae36493e54130646b3faf52f5a
+   stream #169 flowing at $0.000166/s
+
+[3/4] READ — paying per paragraph, stopping when it no longer pays off
+   ¶0: paid $0.000100  · relevance 14%  https://testnet.arcscan.app/tx/0x8860c94e047fe407ecab25f126e54b93a9a8de1777e035cea6d52be0368df84b
+        "An autonomous reader does not consume an article the way a person does. It has a budget, a…"
+   ¶1: paid $0.000100  · relevance 0%  https://testnet.arcscan.app/tx/0x5e8de66864df22e28f81480929ae6481cf1a71c7e3cf93ffd26e12cd94fcf101
+        "That makes pricing legible in a way human attention never is. A publisher can watch, trans…"
+   ¶2: paid $0.000100  · relevance 86%  https://testnet.arcscan.app/tx/0x55f3f5f791865c12744fc43407c94a3c3502b6ea9a6c6e6664e767d79ed00cb6
+        "The settlement rail matters more than the model here. Streaming the payment per second of …"
+
+[4/4] SETTLE — cancel the stream, reclaim the unspent budget
+   reclaimable $0.006834
+   ✓ cancel stream #169  https://testnet.arcscan.app/tx/0x216e1b2b271abeb4eb78b83fc53adc24602a8a37f7c3e29ac52a0fc0f0c7d201
+
+✅ read 3 paragraph(s), paid $0.000300 total, autonomously, on Arc.
+   balance $181.786372 — every paragraph release was a live StreamPay settlement.
+
+── round 16/48  article=arc-nanopayments budget=0.020 giveup=2
+
+🤖 Reader agent — pays per paragraph on Arc, no human in the loop
+   address  0x2e36F4037E711e1d4c853BBCBF7F526B3714A08a
+   task     "what does a publisher need to charge a machine per paragraph"
+   judge    word-overlap heuristic (set ANTHROPIC_API_KEY for the LLM judge)
+   balance  $181.786372
+
+[1/4] BROWSE — GET /article/arc-nanopayments
+   "Why the smallest payment is the hardest one" — 5 paragraphs, full price $0.000594
+   publisher 0xed13AA20701F503304bADB7697cbFD4d0C952Acf
+
+[2/4] FUND — StreamPay micro-stream: $0.020000 over 60s -> publisher
+   ✓ createStream  https://testnet.arcscan.app/tx/0xfc61a76bf07af506feb4c27098b5840d53c1d62de68f884de1f9a1c4691d5bfb
+   stream #170 flowing at $0.000333/s
+
+[3/4] READ — paying per paragraph, stopping when it no longer pays off
+   ¶0: paid $0.000112  · relevance 17%  https://testnet.arcscan.app/tx/0xf46ba5bc519f505d63ca64fe652c429407e91214f4fe849deceb9e59394cb29b
+        "For thirty years the web has had exactly one business model that pays writers reliably: bu…"
+   ¶1: paid $0.000128  · relevance 33%  https://testnet.arcscan.app/tx/0xfc8041005cceb8311ea1e4c11d82e25bdc69e43b1cffe73af3a9d91f1053557e
+        "That floor was never a law of nature. It was the cost of moving money through card network…"
+   ¶2: paid $0.000120  · relevance 0%  https://testnet.arcscan.app/tx/0xd97cea7e93d8895f58fb6976b1f6792385d113ab93cf80b521d0dd88e6627dd3
+        "Stablecoins on a settlement-first chain change the arithmetic. When USDC is the native gas…"
+   ¶3: paid $0.000122  · relevance 33%  https://testnet.arcscan.app/tx/0x0a19158f66288900fc52731f4bf7d2ee6517f710995bef1504e3a17a428e168c
+        "The first buyers of nanopaid content will not be humans clicking a tip jar. They will be a…"
+   ¶4: paid $0.000112  · relevance 100%  https://testnet.arcscan.app/tx/0xc8c1fe5dd9eb6277e010ff0d1cd5102cfb07db2f991c6be8abc7e38c5091723c
+        "What this needs is not a new token but a new toll booth: a way for a publisher to charge a…"
+
+[4/4] SETTLE — cancel the stream, reclaim the unspent budget
+   reclaimable $0.010667
+   ✓ cancel stream #170  https://testnet.arcscan.app/tx/0x881737a424b7dd539fac6caa0f004d72d721c282c5abef6c0abf43e62de8b210
+
+✅ read 5 paragraph(s), paid $0.000594 total, autonomously, on Arc.
+   balance $181.770848 — every paragraph release was a live StreamPay settlement.
+
+── round 17/48  article=agent-reading-economics budget=0.030 giveup=3
+
+🤖 Reader agent — pays per paragraph on Arc, no human in the loop
+   address  0x2e36F4037E711e1d4c853BBCBF7F526B3714A08a
+   task     "what can a publisher learn from per-transaction reading data"
+   judge    word-overlap heuristic (set ANTHROPIC_API_KEY for the LLM judge)
+   balance  $181.770848
+
+[1/4] BROWSE — GET /article/agent-reading-economics
+   "How an agent decides what to pay for" — 3 paragraphs, full price $0.000300
+   publisher 0xed13AA20701F503304bADB7697cbFD4d0C952Acf
+
+[2/4] FUND — StreamPay micro-stream: $0.030000 over 60s -> publisher
+   ✓ createStream  https://testnet.arcscan.app/tx/0x81e103e22229c43e9216b01318191657867bc757bfa481747ebd666518c3520a
+   stream #171 flowing at $0.000500/s
+
+[3/4] READ — paying per paragraph, stopping when it no longer pays off
+   ¶0: paid $0.000100  · relevance 0%  https://testnet.arcscan.app/tx/0xaaf0e098add6faa0504689a971612eb3e86fa8358efb89a8615be4a58096fcce
+        "An autonomous reader does not consume an article the way a person does. It has a budget, a…"
+   ¶1: paid $0.000100  · relevance 50%  https://testnet.arcscan.app/tx/0x31d87b19bf16befabaa1dac0cbc89756ac6eec281c5bf53fa39f1b4b7877895c
+        "That makes pricing legible in a way human attention never is. A publisher can watch, trans…"
+   ¶2: paid $0.000100  · relevance 50%  https://testnet.arcscan.app/tx/0x788641484fb890acd1f0aea126346a8a7c6e5c4a92d04942694d2c71d6d3b549
+        "The settlement rail matters more than the model here. Streaming the payment per second of …"
+
+[4/4] SETTLE — cancel the stream, reclaim the unspent budget
+   reclaimable $0.021000
+   ✓ cancel stream #171  https://testnet.arcscan.app/tx/0x456c1f779f02d4a562d2029183e55e3afa50d4caeef0feae75b97761070139af
+
+✅ read 3 paragraph(s), paid $0.000300 total, autonomously, on Arc.
+   balance $181.754978 — every paragraph release was a live StreamPay settlement.
+
+── round 18/48  article=arc-nanopayments budget=0.040 giveup=2
+
+🤖 Reader agent — pays per paragraph on Arc, no human in the loop
+   address  0x2e36F4037E711e1d4c853BBCBF7F526B3714A08a
+   task     "why does the card fee floor make the long tail of writing invisible"
+   judge    word-overlap heuristic (set ANTHROPIC_API_KEY for the LLM judge)
+   balance  $181.754978
+
+[1/4] BROWSE — GET /article/arc-nanopayments
+   "Why the smallest payment is the hardest one" — 5 paragraphs, full price $0.000594
+   publisher 0xed13AA20701F503304bADB7697cbFD4d0C952Acf
+
+[2/4] FUND — StreamPay micro-stream: $0.040000 over 60s -> publisher
+   ✓ createStream  https://testnet.arcscan.app/tx/0x4b50410827372f45fce0f39b731e6982bc4a0f507a90603e1bbe9fc2a9a54f3f
+   stream #172 flowing at $0.000666/s
+
+[3/4] READ — paying per paragraph, stopping when it no longer pays off
+   ¶0: paid $0.000112  · relevance 13%  https://testnet.arcscan.app/tx/0x416806eb217e630d375ad94e70cecd4d0f33181f0021af1c27e59ead24334dff
+        "For thirty years the web has had exactly one business model that pays writers reliably: bu…"
+   ¶1: paid $0.000128  · relevance 75%  https://testnet.arcscan.app/tx/0xae672fbaa872c3778aa5ea2bb5a337c5b91474a01d8a9845f68178048cf44ae7
+        "That floor was never a law of nature. It was the cost of moving money through card network…"
+   ¶2: paid $0.000120  · relevance 0%  https://testnet.arcscan.app/tx/0x106d023c56c87f4d9417acfcc904b6d0c9a16be47b6cf5335cd98478d468f1e3
+        "Stablecoins on a settlement-first chain change the arithmetic. When USDC is the native gas…"
+   ¶3: paid $0.000122  · relevance 0%  https://testnet.arcscan.app/tx/0x75b4eaf58b6cc2866a99c41a2e8c8af081f9283b77b36f9cd4810057977527db
+        "The first buyers of nanopaid content will not be humans clicking a tip jar. They will be a…"
+   · 2 cold paragraph(s) — task saturated, stop.
+
+[4/4] SETTLE — cancel the stream, reclaim the unspent budget
+   reclaimable $0.024000
+   ✓ cancel stream #172  https://testnet.arcscan.app/tx/0x8d3b35feeaadd8365e0e2ae53fe9f1bcaf0e2ffddcf4dab6f81636071abf63c2
+
+✅ read 4 paragraph(s), paid $0.000482 total, autonomously, on Arc.
+   balance $181.732454 — every paragraph release was a live StreamPay settlement.
+
+── round 19/48  article=agent-reading-economics budget=0.050 giveup=3
+
+🤖 Reader agent — pays per paragraph on Arc, no human in the loop
+   address  0x2e36F4037E711e1d4c853BBCBF7F526B3714A08a
+   task     "how does an autonomous reader decide which paragraph to pay for"
+   judge    word-overlap heuristic (set ANTHROPIC_API_KEY for the LLM judge)
+   balance  $181.732454
+
+[1/4] BROWSE — GET /article/agent-reading-economics
+   "How an agent decides what to pay for" — 3 paragraphs, full price $0.000300
+   publisher 0xed13AA20701F503304bADB7697cbFD4d0C952Acf
+
+[2/4] FUND — StreamPay micro-stream: $0.050000 over 60s -> publisher
+   ✓ createStream  https://testnet.arcscan.app/tx/0xf805d93023b17647eb5fedf737e00066b471fc5eb0157c0f669485b53dbd2090
+   stream #173 flowing at $0.000833/s
+
+[3/4] READ — paying per paragraph, stopping when it no longer pays off
+   ¶0: paid $0.000100  · relevance 60%  https://testnet.arcscan.app/tx/0x736dabfe8e3dc24a9e62541af824efd2f7f9e0e941c9690ce6fbbdc8f90d6fc0
+        "An autonomous reader does not consume an article the way a person does. It has a budget, a…"
+   ¶1: paid $0.000100  · relevance 20%  https://testnet.arcscan.app/tx/0xb54541998c149837b30a651b0c92acb59299f25374ca7a75dba046895b4f0fcf
+        "That makes pricing legible in a way human attention never is. A publisher can watch, trans…"
+   ¶2: paid $0.000100  · relevance 0%  https://testnet.arcscan.app/tx/0x3e8281e6450f78e1c63ad0b15381b9c9d680905382a9b85b15d85fa98870a7b4
+        "The settlement rail matters more than the model here. Streaming the payment per second of …"
+
+[4/4] SETTLE — cancel the stream, reclaim the unspent budget
+   reclaimable $0.034167
+   ✓ cancel stream #173  https://testnet.arcscan.app/tx/0xf1681143bee216d03316dfc40569c62a658c6c3e08c18ffbf21743a664def8cf
+
+✅ read 3 paragraph(s), paid $0.000300 total, autonomously, on Arc.
+   balance $181.709084 — every paragraph release was a live StreamPay settlement.
+
+── round 20/48  article=arc-nanopayments budget=0.010 giveup=2
+
+🤖 Reader agent — pays per paragraph on Arc, no human in the loop
+   address  0x2e36F4037E711e1d4c853BBCBF7F526B3714A08a
+   task     "why can card networks not serve micropayments, and what changes it"
+   judge    word-overlap heuristic (set ANTHROPIC_API_KEY for the LLM judge)
+   balance  $181.709084
+
+[1/4] BROWSE — GET /article/arc-nanopayments
+   "Why the smallest payment is the hardest one" — 5 paragraphs, full price $0.000594
+   publisher 0xed13AA20701F503304bADB7697cbFD4d0C952Acf
+
+[2/4] FUND — StreamPay micro-stream: $0.010000 over 60s -> publisher
+   ✓ createStream  https://testnet.arcscan.app/tx/0x177d351adbfb35a1f26d619971ffa5086273028bb82ec6072b4b514eb3fc1c66
+   stream #174 flowing at $0.000166/s
+
+[3/4] READ — paying per paragraph, stopping when it no longer pays off
+   ¶0: paid $0.000112  · relevance 20%  https://testnet.arcscan.app/tx/0x3cce22fe7cf4146c9eacc86bda84078e9c8f39730b96dc5d55e2cc1d1f7afe3c
+        "For thirty years the web has had exactly one business model that pays writers reliably: bu…"
+   ¶1: paid $0.000128  · relevance 40%  https://testnet.arcscan.app/tx/0x21b467fbb9d0092cec4fd2dfd9a3d26e28a4e6867d1ce165733adbb927dd7595
+        "That floor was never a law of nature. It was the cost of moving money through card network…"
+   ¶2: paid $0.000120  · relevance 20%  https://testnet.arcscan.app/tx/0xdad82bef0efb9fb455d04fae38d24c963faf6b4c18085ad4dd339e15c4c39883
+        "Stablecoins on a settlement-first chain change the arithmetic. When USDC is the native gas…"
+   ¶3: paid $0.000122  · relevance 0%  https://testnet.arcscan.app/tx/0xaee2bd22c8231f2a159d716a98a8ec425cabf3458d61c1d681e51e02746e82fb
+        "The first buyers of nanopaid content will not be humans clicking a tip jar. They will be a…"
+   ¶4: paid $0.000112  · relevance 0%  https://testnet.arcscan.app/tx/0xd8630d17fc47d7fbe4d20d2fe0f3a20774b66e91697bae41455936861656c7da
+        "What this needs is not a new token but a new toll booth: a way for a publisher to charge a…"
+   · 2 cold paragraph(s) — task saturated, stop.
+
+[4/4] SETTLE — cancel the stream, reclaim the unspent budget
+   reclaimable $0.005334
+   ✓ cancel stream #174  https://testnet.arcscan.app/tx/0xe57f170f54977864168c509699f7913b56ec7aec5c1bb7ce6e590275b7a79329
+
+✅ read 5 paragraph(s), paid $0.000594 total, autonomously, on Arc.
+   balance $181.698393 — every paragraph release was a live StreamPay settlement.
+
+── round 21/48  article=agent-reading-economics budget=0.020 giveup=3
+
+🤖 Reader agent — pays per paragraph on Arc, no human in the loop
+   address  0x2e36F4037E711e1d4c853BBCBF7F526B3714A08a
+   task     "why is streaming payment per second better than charging per article"
+   judge    word-overlap heuristic (set ANTHROPIC_API_KEY for the LLM judge)
+   balance  $181.698393
+
+[1/4] BROWSE — GET /article/agent-reading-economics
+   "How an agent decides what to pay for" — 3 paragraphs, full price $0.000300
+   publisher 0xed13AA20701F503304bADB7697cbFD4d0C952Acf
+
+[2/4] FUND — StreamPay micro-stream: $0.020000 over 60s -> publisher
+   ✓ createStream  https://testnet.arcscan.app/tx/0x27f58edffee513ef53db4c87b5e09da7037ba3bd0c4cb882fff974ef2c5f8efb
+   stream #175 flowing at $0.000333/s
+
+[3/4] READ — paying per paragraph, stopping when it no longer pays off
+   ¶0: paid $0.000100  · relevance 14%  https://testnet.arcscan.app/tx/0xaf40612d973b96c869dfb6de319919d7d9c7b324347c7d9f5557abe88b724150
+        "An autonomous reader does not consume an article the way a person does. It has a budget, a…"
+   ¶1: paid $0.000100  · relevance 0%  https://testnet.arcscan.app/tx/0x0c89ef5eaa689e47bbd1b12ad22fe561ae465b4fa4de155ff0b62b98a87dd4cb
+        "That makes pricing legible in a way human attention never is. A publisher can watch, trans…"
+   ¶2: paid $0.000100  · relevance 86%  https://testnet.arcscan.app/tx/0xa1c825ea4d6447eccfaa61e0a6bc6c2d30163deccd5df80dc6cb01fefad13647
+        "The settlement rail matters more than the model here. Streaming the payment per second of …"
+
+[4/4] SETTLE — cancel the stream, reclaim the unspent budget
+   reclaimable $0.014000
+   ✓ cancel stream #175  https://testnet.arcscan.app/tx/0xcbd5e93b771978d228f00b63575d872bf58a9f2d716bbe22dd3455e58c26cd23
+
+✅ read 3 paragraph(s), paid $0.000300 total, autonomously, on Arc.
+   balance $181.685857 — every paragraph release was a live StreamPay settlement.
+
+── round 22/48  article=arc-nanopayments budget=0.030 giveup=2
+
+🤖 Reader agent — pays per paragraph on Arc, no human in the loop
+   address  0x2e36F4037E711e1d4c853BBCBF7F526B3714A08a
+   task     "how do stablecoins on a settlement-first chain change payment economics"
+   judge    word-overlap heuristic (set ANTHROPIC_API_KEY for the LLM judge)
+   balance  $181.685857
+
+[1/4] BROWSE — GET /article/arc-nanopayments
+   "Why the smallest payment is the hardest one" — 5 paragraphs, full price $0.000594
+   publisher 0xed13AA20701F503304bADB7697cbFD4d0C952Acf
+
+[2/4] FUND — StreamPay micro-stream: $0.030000 over 60s -> publisher
+   ✓ createStream  https://testnet.arcscan.app/tx/0x0c2ff5fcb322e12e9d293ccac3dfc4d226c7b20b2d08daeaad55d703f6e77286
+   stream #176 flowing at $0.000500/s
+
+[3/4] READ — paying per paragraph, stopping when it no longer pays off
+   ¶0: paid $0.000112  · relevance 14%  https://testnet.arcscan.app/tx/0xb9ad8336d23f7a0e2075e0f64d6747443e9adb810ac3c0da2fbcbce77d1c04dd
+        "For thirty years the web has had exactly one business model that pays writers reliably: bu…"
+   ¶1: paid $0.000128  · relevance 29%  https://testnet.arcscan.app/tx/0x8be30b4698432dd3fdf4eb710c6c16ca3087303a3cb2e12ab93b7623aae95479
+        "That floor was never a law of nature. It was the cost of moving money through card network…"
+   ¶2: paid $0.000120  · relevance 86%  https://testnet.arcscan.app/tx/0xfa5bdb10e2ab9ade556eeb231943adc9c6795b7f1c61e2d505fd3b405e059125
+        "Stablecoins on a settlement-first chain change the arithmetic. When USDC is the native gas…"
+   ¶3: paid $0.000122  · relevance 29%  https://testnet.arcscan.app/tx/0xdedc58403107c4e52374ef478651364dc623bdf50703dc666bc26ca76665a46c
+        "The first buyers of nanopaid content will not be humans clicking a tip jar. They will be a…"
+   ¶4: paid $0.000112  · relevance 29%  https://testnet.arcscan.app/tx/0x4b2f716962489875684bdc3aac1a9990a74764406124d030a72309d55da2a4c2
+        "What this needs is not a new token but a new toll booth: a way for a publisher to charge a…"
+
+[4/4] SETTLE — cancel the stream, reclaim the unspent budget
+   reclaimable $0.016000
+   ✓ cancel stream #176  https://testnet.arcscan.app/tx/0x2eb6ca1c9eb516a098f00c5c0615d53ef2fee03e7eb908da17abdfcf7f31e67d
+
+✅ read 5 paragraph(s), paid $0.000594 total, autonomously, on Arc.
+   balance $181.665499 — every paragraph release was a live StreamPay settlement.
+
+── round 23/48  article=agent-reading-economics budget=0.040 giveup=3
+
+🤖 Reader agent — pays per paragraph on Arc, no human in the loop
+   address  0x2e36F4037E711e1d4c853BBCBF7F526B3714A08a
+   task     "what can a publisher learn from per-transaction reading data"
+   judge    word-overlap heuristic (set ANTHROPIC_API_KEY for the LLM judge)
+   balance  $181.665499
+
+[1/4] BROWSE — GET /article/agent-reading-economics
+   "How an agent decides what to pay for" — 3 paragraphs, full price $0.000300
+   publisher 0xed13AA20701F503304bADB7697cbFD4d0C952Acf
+
+[2/4] FUND — StreamPay micro-stream: $0.040000 over 60s -> publisher
+   ✓ createStream  https://testnet.arcscan.app/tx/0xbeb228f587f7f3d2af4cfbb5029f86a1eb96478de58fab6c99d8fe7f372bc164
+   stream #177 flowing at $0.000666/s
+
+[3/4] READ — paying per paragraph, stopping when it no longer pays off
+   ¶0: paid $0.000100  · relevance 0%  https://testnet.arcscan.app/tx/0x1ba53538801823e820f0c91dab56cfc051fa7e64b29e20605c935816f5ecd8f8
+        "An autonomous reader does not consume an article the way a person does. It has a budget, a…"
+   ¶1: paid $0.000100  · relevance 50%  https://testnet.arcscan.app/tx/0x5c1886fa860a566cded14734bc021d38210b97dabecfb3117962c133a0e02ceb
+        "That makes pricing legible in a way human attention never is. A publisher can watch, trans…"
+   ¶2: paid $0.000100  · relevance 50%  https://testnet.arcscan.app/tx/0x9e522ad9e860c410991559d766e0c47f04b59e5835b8ff1759f02e11be772981
+        "The settlement rail matters more than the model here. Streaming the payment per second of …"
+
+[4/4] SETTLE — cancel the stream, reclaim the unspent budget
+   reclaimable $0.028000
+   ✓ cancel stream #177  https://testnet.arcscan.app/tx/0x1e5668cab51d31f653572aaa565028eb9a186920c25438baaa9c50dd270f5225
+
+✅ read 3 paragraph(s), paid $0.000300 total, autonomously, on Arc.
+   balance $181.646297 — every paragraph release was a live StreamPay settlement.
+
+── round 24/48  article=arc-nanopayments budget=0.050 giveup=2
+
+🤖 Reader agent — pays per paragraph on Arc, no human in the loop
+   address  0x2e36F4037E711e1d4c853BBCBF7F526B3714A08a
+   task     "who are the first buyers of nanopaid content and why"
+   judge    word-overlap heuristic (set ANTHROPIC_API_KEY for the LLM judge)
+   balance  $181.646297
+
+[1/4] BROWSE — GET /article/arc-nanopayments
+   "Why the smallest payment is the hardest one" — 5 paragraphs, full price $0.000594
+   publisher 0xed13AA20701F503304bADB7697cbFD4d0C952Acf
+
+[2/4] FUND — StreamPay micro-stream: $0.050000 over 60s -> publisher
+   ✓ createStream  https://testnet.arcscan.app/tx/0xde748875d8766a707df7e0228e3333230db78e22c0589afe9489eb92ab7647a4
+   stream #178 flowing at $0.000833/s
+
+[3/4] READ — paying per paragraph, stopping when it no longer pays off
+   ¶0: paid $0.000112  · relevance 0%  https://testnet.arcscan.app/tx/0x4dfb8d78a80e021fd491357e6720e04a210d1348d02640f654e2a2fea9969161
+        "For thirty years the web has had exactly one business model that pays writers reliably: bu…"
+   ¶1: paid $0.000128  · relevance 0%  https://testnet.arcscan.app/tx/0x05a595168236d9926f95e8e052e9472f8dc9794bb725bb9a8720289c631c4b7d
+        "That floor was never a law of nature. It was the cost of moving money through card network…"
+   · 2 cold paragraph(s) — task saturated, stop.
+
+[4/4] SETTLE — cancel the stream, reclaim the unspent budget
+   reclaimable $0.038334
+   ✓ cancel stream #178  https://testnet.arcscan.app/tx/0xe297d332f2fa96b1e4f4da2507c12f206d99b65006acfe9f8811940652cb1576
+
+✅ read 2 paragraph(s), paid $0.000240 total, autonomously, on Arc.
+   balance $181.627105 — every paragraph release was a live StreamPay settlement.
+
+── round 25/48  article=agent-reading-economics budget=0.010 giveup=3
+
+🤖 Reader agent — pays per paragraph on Arc, no human in the loop
+   address  0x2e36F4037E711e1d4c853BBCBF7F526B3714A08a
+   task     "how does an autonomous reader decide which paragraph to pay for"
+   judge    word-overlap heuristic (set ANTHROPIC_API_KEY for the LLM judge)
+   balance  $181.627105
+
+[1/4] BROWSE — GET /article/agent-reading-economics
+   "How an agent decides what to pay for" — 3 paragraphs, full price $0.000300
+   publisher 0xed13AA20701F503304bADB7697cbFD4d0C952Acf
+
+[2/4] FUND — StreamPay micro-stream: $0.010000 over 60s -> publisher
+   ✓ createStream  https://testnet.arcscan.app/tx/0x6b53ce61762907607e75b12444873cdf73aaa08d22565854bcdf214c0e2e9c21
+   stream #179 flowing at $0.000166/s
+
+[3/4] READ — paying per paragraph, stopping when it no longer pays off
+   ¶0: paid $0.000100  · relevance 60%  https://testnet.arcscan.app/tx/0x541620751d997dc7e4a4bdca64c5dc79b44d1b01a17efb27e55924f4e4ed3394
+        "An autonomous reader does not consume an article the way a person does. It has a budget, a…"
+   ¶1: paid $0.000100  · relevance 20%  https://testnet.arcscan.app/tx/0x828edfbac2de667485b08287171f4d26253de9d513789ca0126ff614fc638f3f
+        "That makes pricing legible in a way human attention never is. A publisher can watch, trans…"
+   ¶2: paid $0.000100  · relevance 0%  https://testnet.arcscan.app/tx/0x63daa7203d2675b23cc65dcc72e618c4436b3b760e2d25dc58a58c3526043aac
+        "The settlement rail matters more than the model here. Streaming the payment per second of …"
+
+[4/4] SETTLE — cancel the stream, reclaim the unspent budget
+   reclaimable $0.006834
+   ✓ cancel stream #179  https://testnet.arcscan.app/tx/0x3ed0d9cf5ceec506c2b16831f2affad895790cde041cc063af68a9df9c07954f
+
+✅ read 3 paragraph(s), paid $0.000300 total, autonomously, on Arc.
+   balance $181.617903 — every paragraph release was a live StreamPay settlement.
+
+── round 26/48  article=arc-nanopayments budget=0.020 giveup=2
+
+🤖 Reader agent — pays per paragraph on Arc, no human in the loop
+   address  0x2e36F4037E711e1d4c853BBCBF7F526B3714A08a
+   task     "what does a publisher need to charge a machine per paragraph"
+   judge    word-overlap heuristic (set ANTHROPIC_API_KEY for the LLM judge)
+   balance  $181.617903
+
+[1/4] BROWSE — GET /article/arc-nanopayments
+   "Why the smallest payment is the hardest one" — 5 paragraphs, full price $0.000594
+   publisher 0xed13AA20701F503304bADB7697cbFD4d0C952Acf
+
+[2/4] FUND — StreamPay micro-stream: $0.020000 over 60s -> publisher
+   ✓ createStream  https://testnet.arcscan.app/tx/0x4e216643680b5738443c211e0c4108d20bc6c8692b05cd989b6a84b3f67ba716
+   stream #180 flowing at $0.000333/s
+
+[3/4] READ — paying per paragraph, stopping when it no longer pays off
+   ¶0: paid $0.000112  · relevance 17%  https://testnet.arcscan.app/tx/0xc85694c1d32bdd7be576789b297de386cf98342b43f6c2e9d08f3eee68ad03db
+        "For thirty years the web has had exactly one business model that pays writers reliably: bu…"
+   ¶1: paid $0.000128  · relevance 33%  https://testnet.arcscan.app/tx/0xe96751eec12b5c078abc907bf23b455b759be50af07cbdf37d43d0c4e3482c30
+        "That floor was never a law of nature. It was the cost of moving money through card network…"
+   ¶2: paid $0.000120  · relevance 0%  https://testnet.arcscan.app/tx/0x3d0ec47572e8ac1bf77c1ea1b8db3d2858af58c6047c858b85f155233180ba1f
+        "Stablecoins on a settlement-first chain change the arithmetic. When USDC is the native gas…"
+   ¶3: paid $0.000122  · relevance 33%  https://testnet.arcscan.app/tx/0xb122e58e56813be79922046f0e29eab140a28e1097c79a8dbe8639eff9a012dd
+        "The first buyers of nanopaid content will not be humans clicking a tip jar. They will be a…"
+   ¶4: paid $0.000112  · relevance 100%  https://testnet.arcscan.app/tx/0x80d4e453d9d34070e0dfecaa4bf16880270ef3eacda6225aa231b5493d95923d
+        "What this needs is not a new token but a new toll booth: a way for a publisher to charge a…"
+
+[4/4] SETTLE — cancel the stream, reclaim the unspent budget
+   reclaimable $0.010667
+   ✓ cancel stream #180  https://testnet.arcscan.app/tx/0x49fb8c97f209c916deec2bfb25a1deab157f7bc10a8253d8e9b2654760c4a654
+
+✅ read 5 paragraph(s), paid $0.000594 total, autonomously, on Arc.
+   balance $181.602378 — every paragraph release was a live StreamPay settlement.
+
+── round 27/48  article=agent-reading-economics budget=0.030 giveup=3
+
+🤖 Reader agent — pays per paragraph on Arc, no human in the loop
+   address  0x2e36F4037E711e1d4c853BBCBF7F526B3714A08a
+   task     "why is streaming payment per second better than charging per article"
+   judge    word-overlap heuristic (set ANTHROPIC_API_KEY for the LLM judge)
+   balance  $181.602378
+
+[1/4] BROWSE — GET /article/agent-reading-economics
+   "How an agent decides what to pay for" — 3 paragraphs, full price $0.000300
+   publisher 0xed13AA20701F503304bADB7697cbFD4d0C952Acf
+
+[2/4] FUND — StreamPay micro-stream: $0.030000 over 60s -> publisher
+   ✓ createStream  https://testnet.arcscan.app/tx/0x32cd8e4a5a7a40c2a94716d95bc386ce20e3a796e4df48acc121dd590bde570c
+   stream #181 flowing at $0.000500/s
+
+[3/4] READ — paying per paragraph, stopping when it no longer pays off
+   ¶0: paid $0.000100  · relevance 14%  https://testnet.arcscan.app/tx/0x93eff2d022df0027e21d156f08507d52b332e1f36d8637d144339d0138095203
+        "An autonomous reader does not consume an article the way a person does. It has a budget, a…"
+   ¶1: paid $0.000100  · relevance 0%  https://testnet.arcscan.app/tx/0xe059116efe3eb03408cf6c95cd528573eda97356771b521c9672b3cc9523750d
+        "That makes pricing legible in a way human attention never is. A publisher can watch, trans…"
+   ¶2: paid $0.000100  · relevance 86%  https://testnet.arcscan.app/tx/0xc9a06c68a0b5420780b1a766ad80d408994ca2aacf8c2809722b7fe350bc78e8
+        "The settlement rail matters more than the model here. Streaming the payment per second of …"
+
+[4/4] SETTLE — cancel the stream, reclaim the unspent budget
+   reclaimable $0.020500
+   ✓ cancel stream #181  https://testnet.arcscan.app/tx/0xe7d94a616e85224908969fa4103624f0c5c7c724acebee836d1a1005fbae3691
+
+✅ read 3 paragraph(s), paid $0.000300 total, autonomously, on Arc.
+   balance $181.586509 — every paragraph release was a live StreamPay settlement.
+
+── round 28/48  article=arc-nanopayments budget=0.040 giveup=2
+
+🤖 Reader agent — pays per paragraph on Arc, no human in the loop
+   address  0x2e36F4037E711e1d4c853BBCBF7F526B3714A08a
+   task     "why does the card fee floor make the long tail of writing invisible"
+   judge    word-overlap heuristic (set ANTHROPIC_API_KEY for the LLM judge)
+   balance  $181.586509
+
+[1/4] BROWSE — GET /article/arc-nanopayments
+   "Why the smallest payment is the hardest one" — 5 paragraphs, full price $0.000594
+   publisher 0xed13AA20701F503304bADB7697cbFD4d0C952Acf
+
+[2/4] FUND — StreamPay micro-stream: $0.040000 over 60s -> publisher
+   ✓ createStream  https://testnet.arcscan.app/tx/0xa90632520ac5b6c7bcdb5bec7db675d15411312abb63c9f7e4577a13a6bd0818
+   stream #182 flowing at $0.000666/s
+
+[3/4] READ — paying per paragraph, stopping when it no longer pays off
+   ¶0: paid $0.000112  · relevance 13%  https://testnet.arcscan.app/tx/0xc948c3ca6d538ea0f5b73b5a134d26cc36a42cd1961a25373ccde0b0894c0a83
+        "For thirty years the web has had exactly one business model that pays writers reliably: bu…"
+   ¶1: paid $0.000128  · relevance 75%  https://testnet.arcscan.app/tx/0x1846b0c3b076383dcbcdcd49b73e6dc92165470af1a5c0749d20f682641efaf9
+        "That floor was never a law of nature. It was the cost of moving money through card network…"
+   ¶2: paid $0.000120  · relevance 0%  https://testnet.arcscan.app/tx/0x5a3c960d58cdede8ec352d605275139a81b1c97d151807c24bbb7a8617d22aab
+        "Stablecoins on a settlement-first chain change the arithmetic. When USDC is the native gas…"
+   ¶3: paid $0.000122  · relevance 0%  https://testnet.arcscan.app/tx/0xa4e789a47890a45ab84bee249c3f4bd9eca6f248c3e19174fca16cf57a710631
+        "The first buyers of nanopaid content will not be humans clicking a tip jar. They will be a…"
+   · 2 cold paragraph(s) — task saturated, stop.
+
+[4/4] SETTLE — cancel the stream, reclaim the unspent budget
+   reclaimable $0.024667
+   ✓ cancel stream #182  https://testnet.arcscan.app/tx/0x26bcee18cab7a6c3e2aa1e77bc3662f87afdfb567f96383de69b3876e9de1e52
+
+✅ read 4 paragraph(s), paid $0.000482 total, autonomously, on Arc.
+   balance $181.563984 — every paragraph release was a live StreamPay settlement.
+
+── round 29/48  article=agent-reading-economics budget=0.050 giveup=3
+
+🤖 Reader agent — pays per paragraph on Arc, no human in the loop
+   address  0x2e36F4037E711e1d4c853BBCBF7F526B3714A08a
+   task     "what can a publisher learn from per-transaction reading data"
+   judge    word-overlap heuristic (set ANTHROPIC_API_KEY for the LLM judge)
+   balance  $181.563984
+
+[1/4] BROWSE — GET /article/agent-reading-economics
+   "How an agent decides what to pay for" — 3 paragraphs, full price $0.000300
+   publisher 0xed13AA20701F503304bADB7697cbFD4d0C952Acf
+
+[2/4] FUND — StreamPay micro-stream: $0.050000 over 60s -> publisher
+   ✓ createStream  https://testnet.arcscan.app/tx/0xa10c22a1173876dc58204f8c8393888dd658a0f26271d8d6f326a611aa9e9124
+   stream #183 flowing at $0.000833/s
+
+[3/4] READ — paying per paragraph, stopping when it no longer pays off
+   ¶0: paid $0.000100  · relevance 0%  https://testnet.arcscan.app/tx/0xc2e34093326857e3e4fafc74e797daead85219785ee764320106afca67594e53
+        "An autonomous reader does not consume an article the way a person does. It has a budget, a…"
+   ¶1: paid $0.000100  · relevance 50%  https://testnet.arcscan.app/tx/0x6efb5f2be08344798af4c6746195e274c23854e3839bc0c3d6de35bee856a059
+        "That makes pricing legible in a way human attention never is. A publisher can watch, trans…"
+   ¶2: paid $0.000100  · relevance 50%  https://testnet.arcscan.app/tx/0xf17fc917e4ff6622f17968102ba2074632de2a64c9543565a175568bf934bbcb
+        "The settlement rail matters more than the model here. Streaming the payment per second of …"
+
+[4/4] SETTLE — cancel the stream, reclaim the unspent budget
+   reclaimable $0.034167
+   ✓ cancel stream #183  https://testnet.arcscan.app/tx/0x854597841ad0ae0a881216f35c4727c5f9c3fd6c408ca07fae432f8f50c354f7
+
+✅ read 3 paragraph(s), paid $0.000300 total, autonomously, on Arc.
+   balance $181.541449 — every paragraph release was a live StreamPay settlement.
+
+── round 30/48  article=arc-nanopayments budget=0.010 giveup=2
+
+🤖 Reader agent — pays per paragraph on Arc, no human in the loop
+   address  0x2e36F4037E711e1d4c853BBCBF7F526B3714A08a
+   task     "why can card networks not serve micropayments, and what changes it"
+   judge    word-overlap heuristic (set ANTHROPIC_API_KEY for the LLM judge)
+   balance  $181.541449
+
+[1/4] BROWSE — GET /article/arc-nanopayments
+   "Why the smallest payment is the hardest one" — 5 paragraphs, full price $0.000594
+   publisher 0xed13AA20701F503304bADB7697cbFD4d0C952Acf
+
+[2/4] FUND — StreamPay micro-stream: $0.010000 over 60s -> publisher
+   ✓ createStream  https://testnet.arcscan.app/tx/0xdd979e4f0bf5d89059564e22e43dcd11dbd3f7e36224ff39462b587c2c103b9e
+   stream #184 flowing at $0.000166/s
+
+[3/4] READ — paying per paragraph, stopping when it no longer pays off
+   ¶0: paid $0.000112  · relevance 20%  https://testnet.arcscan.app/tx/0xbd9d72ff6ed4c7d29899169cfa00af8b025827e678728464937d6664f7da645c
+        "For thirty years the web has had exactly one business model that pays writers reliably: bu…"
+   ¶1: paid $0.000128  · relevance 40%  https://testnet.arcscan.app/tx/0xfc233aa084ee299439fcd9411dbf88cba4225638ef87385f97c8254f9b1af97c
+        "That floor was never a law of nature. It was the cost of moving money through card network…"
+   ¶2: paid $0.000120  · relevance 20%  https://testnet.arcscan.app/tx/0x97e57f2eac126a38ae7238277fd0c0dc161f48bfc2acd491169bcc1ffa99f793
+        "Stablecoins on a settlement-first chain change the arithmetic. When USDC is the native gas…"
+   ¶3: paid $0.000122  · relevance 0%  https://testnet.arcscan.app/tx/0x9d85eaeb7c1d53fc0e840ea446d37db62e83587293761b3bee2e121b0ea870d1
+        "The first buyers of nanopaid content will not be humans clicking a tip jar. They will be a…"
+   ¶4: paid $0.000112  · relevance 0%  https://testnet.arcscan.app/tx/0x05ea7cbb1b495bb8ddf63be70c0ea492f041bb0fde9c89558cc0d98d67e3142f
+        "What this needs is not a new token but a new toll booth: a way for a publisher to charge a…"
+   · 2 cold paragraph(s) — task saturated, stop.
+
+[4/4] SETTLE — cancel the stream, reclaim the unspent budget
+   reclaimable $0.005334
+   ✓ cancel stream #184  https://testnet.arcscan.app/tx/0x5685960501728370faa31015f8775fb52a30bd78a051d59360043a99f4910bae
+
+✅ read 5 paragraph(s), paid $0.000594 total, autonomously, on Arc.
+   balance $181.530757 — every paragraph release was a live StreamPay settlement.
+
+── round 31/48  article=agent-reading-economics budget=0.020 giveup=3
+
+🤖 Reader agent — pays per paragraph on Arc, no human in the loop
+   address  0x2e36F4037E711e1d4c853BBCBF7F526B3714A08a
+   task     "how does an autonomous reader decide which paragraph to pay for"
+   judge    word-overlap heuristic (set ANTHROPIC_API_KEY for the LLM judge)
+   balance  $181.530757
+
+[1/4] BROWSE — GET /article/agent-reading-economics
+   "How an agent decides what to pay for" — 3 paragraphs, full price $0.000300
+   publisher 0xed13AA20701F503304bADB7697cbFD4d0C952Acf
+
+[2/4] FUND — StreamPay micro-stream: $0.020000 over 60s -> publisher
+   ✓ createStream  https://testnet.arcscan.app/tx/0x9874d048ab0da7d0d921937086e4fdb99add6f2059e2168673d27a728ed33dcd
+   stream #185 flowing at $0.000333/s
+
+[3/4] READ — paying per paragraph, stopping when it no longer pays off
+   ¶0: paid $0.000100  · relevance 60%  https://testnet.arcscan.app/tx/0xee667500ac2ea1013b90692866d1702adddb3c7fb86dd933c0ddd37022d1bd58
+        "An autonomous reader does not consume an article the way a person does. It has a budget, a…"
+   ¶1: paid $0.000100  · relevance 20%  https://testnet.arcscan.app/tx/0x2ea04214de141f126520ad756d7d925126d6cc61f897b6e16c8c2969624a7efb
+        "That makes pricing legible in a way human attention never is. A publisher can watch, trans…"
+   ¶2: paid $0.000100  · relevance 0%  https://testnet.arcscan.app/tx/0x29cdd87cb6e1587343958a5c9601a2b2f633278d418b9179c13103bf78a8bcd3
+        "The settlement rail matters more than the model here. Streaming the payment per second of …"
+
+[4/4] SETTLE — cancel the stream, reclaim the unspent budget
+   reclaimable $0.014000
+   ✓ cancel stream #185  https://testnet.arcscan.app/tx/0xabe7f84529f6ed9004b69a5072f4b19c6b3ce429efdddd3045d2bca5dbb67803
+
+✅ read 3 paragraph(s), paid $0.000300 total, autonomously, on Arc.
+   balance $181.518222 — every paragraph release was a live StreamPay settlement.
+
+── round 32/48  article=arc-nanopayments budget=0.030 giveup=2
+
+🤖 Reader agent — pays per paragraph on Arc, no human in the loop
+   address  0x2e36F4037E711e1d4c853BBCBF7F526B3714A08a
+   task     "how do stablecoins on a settlement-first chain change payment economics"
+   judge    word-overlap heuristic (set ANTHROPIC_API_KEY for the LLM judge)
+   balance  $181.518222
+
+[1/4] BROWSE — GET /article/arc-nanopayments
+   "Why the smallest payment is the hardest one" — 5 paragraphs, full price $0.000594
+   publisher 0xed13AA20701F503304bADB7697cbFD4d0C952Acf
+
+[2/4] FUND — StreamPay micro-stream: $0.030000 over 60s -> publisher
+   ✓ createStream  https://testnet.arcscan.app/tx/0x3feb6bb0c866e7d961f3cb9a89fed727ad0ca5c0670a2f09c4563e31ce2cafa0
+   stream #186 flowing at $0.000500/s
+
+[3/4] READ — paying per paragraph, stopping when it no longer pays off
+   ¶0: paid $0.000112  · relevance 14%  https://testnet.arcscan.app/tx/0x8aac19139a78a7bc97677ed8456b097588497847895f0d1dfa293b19613bc61b
+        "For thirty years the web has had exactly one business model that pays writers reliably: bu…"
+   ¶1: paid $0.000128  · relevance 29%  https://testnet.arcscan.app/tx/0x09342baf2f838957b5bf8973dc1e605d7cc7ff0b6140869b4bf9711269452b18
+        "That floor was never a law of nature. It was the cost of moving money through card network…"
+   ¶2: paid $0.000120  · relevance 86%  https://testnet.arcscan.app/tx/0x22711c9449c574614946c2f14d6533c6ce8933d0020343b19a5ead2ff4952a33
+        "Stablecoins on a settlement-first chain change the arithmetic. When USDC is the native gas…"
+   ¶3: paid $0.000122  · relevance 29%  https://testnet.arcscan.app/tx/0x8080b98c79102bbd124743ed920bf46638a0db389bbf94c0a7f08f55c6963cf3
+        "The first buyers of nanopaid content will not be humans clicking a tip jar. They will be a…"
+   ¶4: paid $0.000112  · relevance 29%  https://testnet.arcscan.app/tx/0x80c3c1e39a6514d58569b197a6224400d1a31f1a5abbe0e824a9cf34151181a3
+        "What this needs is not a new token but a new toll booth: a way for a publisher to charge a…"
+
+[4/4] SETTLE — cancel the stream, reclaim the unspent budget
+   reclaimable $0.016000
+   ✓ cancel stream #186  https://testnet.arcscan.app/tx/0x44a487d9b616df0d6e695e5221c5f8312ac1b2f3d68473b87049c9e78bd4e21f
+
+✅ read 5 paragraph(s), paid $0.000594 total, autonomously, on Arc.
+   balance $181.497864 — every paragraph release was a live StreamPay settlement.
+
+── round 33/48  article=agent-reading-economics budget=0.040 giveup=3
+
+🤖 Reader agent — pays per paragraph on Arc, no human in the loop
+   address  0x2e36F4037E711e1d4c853BBCBF7F526B3714A08a
+   task     "why is streaming payment per second better than charging per article"
+   judge    word-overlap heuristic (set ANTHROPIC_API_KEY for the LLM judge)
+   balance  $181.497864
+
+[1/4] BROWSE — GET /article/agent-reading-economics
+   "How an agent decides what to pay for" — 3 paragraphs, full price $0.000300
+   publisher 0xed13AA20701F503304bADB7697cbFD4d0C952Acf
+
+[2/4] FUND — StreamPay micro-stream: $0.040000 over 60s -> publisher
+   ✓ createStream  https://testnet.arcscan.app/tx/0xfcd8efd528c5067a4fa2b722dd7c54c54a121272618c22dfc3db242e7a26bde2
+   stream #187 flowing at $0.000666/s
+
+[3/4] READ — paying per paragraph, stopping when it no longer pays off
+   ¶0: paid $0.000100  · relevance 14%  https://testnet.arcscan.app/tx/0x699e3b00381ead63a3f1d3cf52e7dbedf0dfeab5da3c77368b81eac6d327a9c9
+        "An autonomous reader does not consume an article the way a person does. It has a budget, a…"
+   ¶1: paid $0.000100  · relevance 0%  https://testnet.arcscan.app/tx/0x76c3f0208b72b00b0c272f6c2ed53e79970c0420988661bb8d4a17a2b734ba8c
+        "That makes pricing legible in a way human attention never is. A publisher can watch, trans…"
+   ¶2: paid $0.000100  · relevance 86%  https://testnet.arcscan.app/tx/0x75d0dbcbaac72cb900cb423ab9b1480dd73aa59e2cadba66d0ba10e4b2a0c2de
+        "The settlement rail matters more than the model here. Streaming the payment per second of …"
+
+[4/4] SETTLE — cancel the stream, reclaim the unspent budget
+   reclaimable $0.027334
+   ✓ cancel stream #187  https://testnet.arcscan.app/tx/0x0887b570a412deac182a2253fa597d8a0cf20e17f94aaef6e5c2a665b0caa9a2
+
+✅ read 3 paragraph(s), paid $0.000300 total, autonomously, on Arc.
+   balance $181.478661 — every paragraph release was a live StreamPay settlement.
+
+── round 34/48  article=arc-nanopayments budget=0.050 giveup=2
+
+🤖 Reader agent — pays per paragraph on Arc, no human in the loop
+   address  0x2e36F4037E711e1d4c853BBCBF7F526B3714A08a
+   task     "who are the first buyers of nanopaid content and why"
+   judge    word-overlap heuristic (set ANTHROPIC_API_KEY for the LLM judge)
+   balance  $181.478661
+
+[1/4] BROWSE — GET /article/arc-nanopayments
+   "Why the smallest payment is the hardest one" — 5 paragraphs, full price $0.000594
+   publisher 0xed13AA20701F503304bADB7697cbFD4d0C952Acf
+
+[2/4] FUND — StreamPay micro-stream: $0.050000 over 60s -> publisher
+   ✓ createStream  https://testnet.arcscan.app/tx/0xd60fe6f57ab9e901e558e745a5260428ced59e641e2b49a041320487583bb65b
+   stream #188 flowing at $0.000833/s
+
+[3/4] READ — paying per paragraph, stopping when it no longer pays off
+   ¶0: paid $0.000112  · relevance 0%  https://testnet.arcscan.app/tx/0x686a9a071a46d452fb71b7a10f11601137ca61ca7af297a6e43c221ababc6f89
+        "For thirty years the web has had exactly one business model that pays writers reliably: bu…"
+   ¶1: paid $0.000128  · relevance 0%  https://testnet.arcscan.app/tx/0xd7cad7a9b6b7b9554c63d04b949a5741c392effc460b36a177cc553a45e873b0
+        "That floor was never a law of nature. It was the cost of moving money through card network…"
+   · 2 cold paragraph(s) — task saturated, stop.
+
+[4/4] SETTLE — cancel the stream, reclaim the unspent budget
+   reclaimable $0.038334
+   ✓ cancel stream #188  https://testnet.arcscan.app/tx/0xd8758592bc31fef651d14cc8bb1f10a69b51bc097ca23cb6f601a34564c3134e
+
+✅ read 2 paragraph(s), paid $0.000240 total, autonomously, on Arc.
+   balance $181.459470 — every paragraph release was a live StreamPay settlement.
+
+── round 35/48  article=agent-reading-economics budget=0.010 giveup=3
+
+🤖 Reader agent — pays per paragraph on Arc, no human in the loop
+   address  0x2e36F4037E711e1d4c853BBCBF7F526B3714A08a
+   task     "what can a publisher learn from per-transaction reading data"
+   judge    word-overlap heuristic (set ANTHROPIC_API_KEY for the LLM judge)
+   balance  $181.459470
+
+[1/4] BROWSE — GET /article/agent-reading-economics
+   "How an agent decides what to pay for" — 3 paragraphs, full price $0.000300
+   publisher 0xed13AA20701F503304bADB7697cbFD4d0C952Acf
+
+[2/4] FUND — StreamPay micro-stream: $0.010000 over 60s -> publisher
+   ✓ createStream  https://testnet.arcscan.app/tx/0x2e3bdafa7ecae21e77526526f5dd74f9a133c12c9e3d6985ca54efd642443d05
+   stream #189 flowing at $0.000166/s
+
+[3/4] READ — paying per paragraph, stopping when it no longer pays off
+   ¶0: paid $0.000100  · relevance 0%  https://testnet.arcscan.app/tx/0x93e61298d2b1d81c4de39738d521ecf478ed0b58875c7abf8e4bdd715c13de12
+        "An autonomous reader does not consume an article the way a person does. It has a budget, a…"
+   ¶1: paid $0.000100  · relevance 50%  https://testnet.arcscan.app/tx/0x88336f3787367f93c47fe2a7055067fd183267a58e447b388f29db04b6a5e717
+        "That makes pricing legible in a way human attention never is. A publisher can watch, trans…"
+   ¶2: paid $0.000100  · relevance 50%  https://testnet.arcscan.app/tx/0xabb66ce09cde92d82645d0b2f0b98e697737da03cd1aebae9a9d4f4dd7294101
+        "The settlement rail matters more than the model here. Streaming the payment per second of …"
+
+[4/4] SETTLE — cancel the stream, reclaim the unspent budget
+   reclaimable $0.007000
+   ✓ cancel stream #189  https://testnet.arcscan.app/tx/0xa0174aecf165673a7e8479c5d2580c8d0d5c384dea76fcea065197e149925866
+
+✅ read 3 paragraph(s), paid $0.000300 total, autonomously, on Arc.
+   balance $181.450267 — every paragraph release was a live StreamPay settlement.
+
+── round 36/48  article=arc-nanopayments budget=0.020 giveup=2
+
+🤖 Reader agent — pays per paragraph on Arc, no human in the loop
+   address  0x2e36F4037E711e1d4c853BBCBF7F526B3714A08a
+   task     "what does a publisher need to charge a machine per paragraph"
+   judge    word-overlap heuristic (set ANTHROPIC_API_KEY for the LLM judge)
+   balance  $181.450267
+
+[1/4] BROWSE — GET /article/arc-nanopayments
+   "Why the smallest payment is the hardest one" — 5 paragraphs, full price $0.000594
+   publisher 0xed13AA20701F503304bADB7697cbFD4d0C952Acf
+
+[2/4] FUND — StreamPay micro-stream: $0.020000 over 60s -> publisher
+   ✓ createStream  https://testnet.arcscan.app/tx/0x668edf4b0c65d0153b81e39986375cce0887b2f13472ae2a721a02a55c0aaf43
+   stream #190 flowing at $0.000333/s
+
+[3/4] READ — paying per paragraph, stopping when it no longer pays off
+   ¶0: paid $0.000112  · relevance 17%  https://testnet.arcscan.app/tx/0xd8a06fd91a867af0e70b91b332b0d1d874e0765a3c82215d05ffa9fa728bd0c2
+        "For thirty years the web has had exactly one business model that pays writers reliably: bu…"
+   ¶1: paid $0.000128  · relevance 33%  https://testnet.arcscan.app/tx/0x246c2db3901ba08a13301fb90d40b4e37178dc09a3ad677d3f912a4d3aa2328b
+        "That floor was never a law of nature. It was the cost of moving money through card network…"
+   ¶2: paid $0.000120  · relevance 0%  https://testnet.arcscan.app/tx/0xd31071a9cb0942850d1bddd15e90c480f1d2e507787b3a22a657f60b0ba81fd7
+        "Stablecoins on a settlement-first chain change the arithmetic. When USDC is the native gas…"
+   ¶3: paid $0.000122  · relevance 33%  https://testnet.arcscan.app/tx/0x0b5af057ecaa35178f17a921d960e51172b3f30f428205600cf6fcb0e662b5ca
+        "The first buyers of nanopaid content will not be humans clicking a tip jar. They will be a…"
+   ¶4: paid $0.000112  · relevance 100%  https://testnet.arcscan.app/tx/0xd8aeb506bcdad5d99e919f1022650c71aa6ff7bff7c3b6c78a9fce97a8f3d343
+        "What this needs is not a new token but a new toll booth: a way for a publisher to charge a…"
+
+[4/4] SETTLE — cancel the stream, reclaim the unspent budget
+   reclaimable $0.010334
+   ✓ cancel stream #190  https://testnet.arcscan.app/tx/0x10764aa6072e599bbdb1801ef045115fbad4f97bef828fdaafc6080e52b13f3a
+
+✅ read 5 paragraph(s), paid $0.000594 total, autonomously, on Arc.
+   balance $181.434409 — every paragraph release was a live StreamPay settlement.
+
+── round 37/48  article=agent-reading-economics budget=0.030 giveup=3
+
+🤖 Reader agent — pays per paragraph on Arc, no human in the loop
+   address  0x2e36F4037E711e1d4c853BBCBF7F526B3714A08a
+   task     "how does an autonomous reader decide which paragraph to pay for"
+   judge    word-overlap heuristic (set ANTHROPIC_API_KEY for the LLM judge)
+   balance  $181.434409
+
+[1/4] BROWSE — GET /article/agent-reading-economics
+   "How an agent decides what to pay for" — 3 paragraphs, full price $0.000300
+   publisher 0xed13AA20701F503304bADB7697cbFD4d0C952Acf
+
+[2/4] FUND — StreamPay micro-stream: $0.030000 over 60s -> publisher
+   ✓ createStream  https://testnet.arcscan.app/tx/0x4e647c7f27ea021d5598992ef2c4f2d6135480a8aa158b4622520043cc9084d3
+   stream #191 flowing at $0.000500/s
+
+[3/4] READ — paying per paragraph, stopping when it no longer pays off
+   ¶0: paid $0.000100  · relevance 60%  https://testnet.arcscan.app/tx/0xb35710a1649c3913113ca3a189182da83733fdabb669b3bca4cf70943e54c4bb
+        "An autonomous reader does not consume an article the way a person does. It has a budget, a…"
+   ¶1: paid $0.000100  · relevance 20%  https://testnet.arcscan.app/tx/0xed55b51a4a49439adf29a03e4780774e4834c82658ca40baeb36bddfea4490fb
+        "That makes pricing legible in a way human attention never is. A publisher can watch, trans…"
+   ¶2: paid $0.000100  · relevance 0%  https://testnet.arcscan.app/tx/0xd11592d5be2d5cf736fd0b194e2ea94ce44c74974cd2f537f36be51e17c48225
+        "The settlement rail matters more than the model here. Streaming the payment per second of …"
+
+[4/4] SETTLE — cancel the stream, reclaim the unspent budget
+   reclaimable $0.021000
+   ✓ cancel stream #191  https://testnet.arcscan.app/tx/0x73eaab854ffdf44575b50ac71e815bf25f6cce47ac644e11a8a1dcecffb26473
+
+✅ read 3 paragraph(s), paid $0.000300 total, autonomously, on Arc.
+   balance $181.419040 — every paragraph release was a live StreamPay settlement.
+
+── round 38/48  article=arc-nanopayments budget=0.040 giveup=2
+
+🤖 Reader agent — pays per paragraph on Arc, no human in the loop
+   address  0x2e36F4037E711e1d4c853BBCBF7F526B3714A08a
+   task     "why does the card fee floor make the long tail of writing invisible"
+   judge    word-overlap heuristic (set ANTHROPIC_API_KEY for the LLM judge)
+   balance  $181.419040
+
+[1/4] BROWSE — GET /article/arc-nanopayments
+   "Why the smallest payment is the hardest one" — 5 paragraphs, full price $0.000594
+   publisher 0xed13AA20701F503304bADB7697cbFD4d0C952Acf
+
+[2/4] FUND — StreamPay micro-stream: $0.040000 over 60s -> publisher
+   ✓ createStream  https://testnet.arcscan.app/tx/0x6438c9419309d3a52f630744e08697e5aa5dc9cde4103f3c0aef1fff744aea57
+   stream #192 flowing at $0.000666/s
+
+[3/4] READ — paying per paragraph, stopping when it no longer pays off
+   ¶0: paid $0.000112  · relevance 13%  https://testnet.arcscan.app/tx/0x178d797ffa5ec66e3a4762ff4b692ec2734f6c10439db7e1bbce64b7fda95f72
+        "For thirty years the web has had exactly one business model that pays writers reliably: bu…"
+   ¶1: paid $0.000128  · relevance 75%  https://testnet.arcscan.app/tx/0xf918dca9232971a6a7de2f6961d78853f41f12e2b49585d60345a6cd2640793b
+        "That floor was never a law of nature. It was the cost of moving money through card network…"
+   ¶2: paid $0.000120  · relevance 0%  https://testnet.arcscan.app/tx/0xd7ffb94dea24bc3090047c5735c2cbc5d9c7d401a166e7905573f0168878f74a
+        "Stablecoins on a settlement-first chain change the arithmetic. When USDC is the native gas…"
+   ¶3: paid $0.000122  · relevance 0%  https://testnet.arcscan.app/tx/0x6a5b72aa4e65ddabe5dc1da2a03860c5786227979172989eac9b88486e7b0003
+        "The first buyers of nanopaid content will not be humans clicking a tip jar. They will be a…"
+   · 2 cold paragraph(s) — task saturated, stop.
+
+[4/4] SETTLE — cancel the stream, reclaim the unspent budget
+   reclaimable $0.024667
+   ✓ cancel stream #192  https://testnet.arcscan.app/tx/0x000c35bcfe9e2b84fae1592306c2f35227ffc153404b6c652af92ec19ca844c4
+
+✅ read 4 paragraph(s), paid $0.000482 total, autonomously, on Arc.
+   balance $181.397181 — every paragraph release was a live StreamPay settlement.
+
+── round 39/48  article=agent-reading-economics budget=0.050 giveup=3
+
+🤖 Reader agent — pays per paragraph on Arc, no human in the loop
+   address  0x2e36F4037E711e1d4c853BBCBF7F526B3714A08a
+   task     "why is streaming payment per second better than charging per article"
+   judge    word-overlap heuristic (set ANTHROPIC_API_KEY for the LLM judge)
+   balance  $181.397181
+
+[1/4] BROWSE — GET /article/agent-reading-economics
+   "How an agent decides what to pay for" — 3 paragraphs, full price $0.000300
+   publisher 0xed13AA20701F503304bADB7697cbFD4d0C952Acf
+
+[2/4] FUND — StreamPay micro-stream: $0.050000 over 60s -> publisher
+   ✓ createStream  https://testnet.arcscan.app/tx/0xada2dcf72bd174ca29ef456f4e55579aadfdf1830aaa65558304832fcacafe48
+   stream #193 flowing at $0.000833/s
+
+[3/4] READ — paying per paragraph, stopping when it no longer pays off
+   ¶0: paid $0.000100  · relevance 14%  https://testnet.arcscan.app/tx/0x3e2f270f26292117f6155153baa34805b88fe8c6bb1c85d3f5dc050d09ff49cf
+        "An autonomous reader does not consume an article the way a person does. It has a budget, a…"
+   ¶1: paid $0.000100  · relevance 0%  https://testnet.arcscan.app/tx/0x0eb1786b962442e6c075750e3535b1e71a6268ed3d7350089908cc81cd267fcb
+        "That makes pricing legible in a way human attention never is. A publisher can watch, trans…"
+   ¶2: paid $0.000100  · relevance 86%  https://testnet.arcscan.app/tx/0xb8b13cd5d3ec1a2ffb044c1189174ea5cbc2b3a38da55eb44522d233fc6f391f
+        "The settlement rail matters more than the model here. Streaming the payment per second of …"
+
+[4/4] SETTLE — cancel the stream, reclaim the unspent budget
+   reclaimable $0.035000
+   ✓ cancel stream #193  https://testnet.arcscan.app/tx/0x54ef9cb906427cd52f701a6aa65ab477d5fb1b87406d38e02d13d97299577027
+
+✅ read 3 paragraph(s), paid $0.000300 total, autonomously, on Arc.
+   balance $181.374646 — every paragraph release was a live StreamPay settlement.
+
+── round 40/48  article=arc-nanopayments budget=0.010 giveup=2
+
+🤖 Reader agent — pays per paragraph on Arc, no human in the loop
+   address  0x2e36F4037E711e1d4c853BBCBF7F526B3714A08a
+   task     "why can card networks not serve micropayments, and what changes it"
+   judge    word-overlap heuristic (set ANTHROPIC_API_KEY for the LLM judge)
+   balance  $181.374646
+
+[1/4] BROWSE — GET /article/arc-nanopayments
+   "Why the smallest payment is the hardest one" — 5 paragraphs, full price $0.000594
+   publisher 0xed13AA20701F503304bADB7697cbFD4d0C952Acf
+
+[2/4] FUND — StreamPay micro-stream: $0.010000 over 60s -> publisher
+   ✓ createStream  https://testnet.arcscan.app/tx/0x8328020bb957c3ce5b64e51a1dace72d9926a2e042a87630198dbea8e064f962
+   stream #194 flowing at $0.000166/s
+
+[3/4] READ — paying per paragraph, stopping when it no longer pays off
+   ¶0: paid $0.000112  · relevance 20%  https://testnet.arcscan.app/tx/0x20865c72cda38622ebb04da71de4da0e63afd1783797e971a6068ef58dcacbad
+        "For thirty years the web has had exactly one business model that pays writers reliably: bu…"
+   ¶1: paid $0.000128  · relevance 40%  https://testnet.arcscan.app/tx/0x2bd2e0148a4515bd1ba6e2a73fc7821f7259db7f56d62ffc6e5c9b092f6fb24d
+        "That floor was never a law of nature. It was the cost of moving money through card network…"
+   ¶2: paid $0.000120  · relevance 20%  https://testnet.arcscan.app/tx/0xfb91e3a6495b0697c49099f87c9e47c9a3356beafe81fdd25179ecacc4e68150
+        "Stablecoins on a settlement-first chain change the arithmetic. When USDC is the native gas…"
+   ¶3: paid $0.000122  · relevance 0%  https://testnet.arcscan.app/tx/0xd48fd026367ab502ffcd0186994a0bc7e8bd39717f3c2a47fa979227a569a409
+        "The first buyers of nanopaid content will not be humans clicking a tip jar. They will be a…"
+   ¶4: paid $0.000112  · relevance 0%  https://testnet.arcscan.app/tx/0x5a05c16a11aac4222b2265d2eac098913b1493f1bfef373e7bc377cdf85782f3
+        "What this needs is not a new token but a new toll booth: a way for a publisher to charge a…"
+   · 2 cold paragraph(s) — task saturated, stop.
+
+[4/4] SETTLE — cancel the stream, reclaim the unspent budget
+   reclaimable $0.005334
+   ✓ cancel stream #194  https://testnet.arcscan.app/tx/0x70fef4b8d973f92293968ea4c7f56e55afd3cc53c91012aec75fc993190286b7
+
+✅ read 5 paragraph(s), paid $0.000594 total, autonomously, on Arc.
+   balance $181.363787 — every paragraph release was a live StreamPay settlement.
+
+── round 41/48  article=agent-reading-economics budget=0.020 giveup=3
+
+🤖 Reader agent — pays per paragraph on Arc, no human in the loop
+   address  0x2e36F4037E711e1d4c853BBCBF7F526B3714A08a
+   task     "what can a publisher learn from per-transaction reading data"
+   judge    word-overlap heuristic (set ANTHROPIC_API_KEY for the LLM judge)
+   balance  $181.363787
+
+[1/4] BROWSE — GET /article/agent-reading-economics
+   "How an agent decides what to pay for" — 3 paragraphs, full price $0.000300
+   publisher 0xed13AA20701F503304bADB7697cbFD4d0C952Acf
+
+[2/4] FUND — StreamPay micro-stream: $0.020000 over 60s -> publisher
+   ✓ createStream  https://testnet.arcscan.app/tx/0x6bdc11405bed25a66ee609550ff042ab10105f15b2af698b5863e9cf1daf6904
+   stream #195 flowing at $0.000333/s
+
+[3/4] READ — paying per paragraph, stopping when it no longer pays off
+   ¶0: paid $0.000100  · relevance 0%  https://testnet.arcscan.app/tx/0x03778fa7ed6649afdf311fc442290f7b13795dc174323fbf7176af865bd3fffd
+        "An autonomous reader does not consume an article the way a person does. It has a budget, a…"
+   ¶1: paid $0.000100  · relevance 50%  https://testnet.arcscan.app/tx/0xc83e9f5c42c6f4ab739eb8794bcb4eec9d1da2c64eeaf085777f0cdb78abf077
+        "That makes pricing legible in a way human attention never is. A publisher can watch, trans…"
+   ¶2: paid $0.000100  · relevance 50%  https://testnet.arcscan.app/tx/0xe02c0ff849900e80c54fae53d6542a000535948a8cc354564e499208ce3abecf
+        "The settlement rail matters more than the model here. Streaming the payment per second of …"
+
+[4/4] SETTLE — cancel the stream, reclaim the unspent budget
+   reclaimable $0.013667
+   ✓ cancel stream #195  https://testnet.arcscan.app/tx/0x8117c2fbe7db0d7e0b6439bc12a1cb8901f51845b2815a4bc9713526ef277e47
+
+✅ read 3 paragraph(s), paid $0.000300 total, autonomously, on Arc.
+   balance $181.351252 — every paragraph release was a live StreamPay settlement.
+
+── round 42/48  article=arc-nanopayments budget=0.030 giveup=2
+
+🤖 Reader agent — pays per paragraph on Arc, no human in the loop
+   address  0x2e36F4037E711e1d4c853BBCBF7F526B3714A08a
+   task     "how do stablecoins on a settlement-first chain change payment economics"
+   judge    word-overlap heuristic (set ANTHROPIC_API_KEY for the LLM judge)
+   balance  $181.351252
+
+[1/4] BROWSE — GET /article/arc-nanopayments
+   "Why the smallest payment is the hardest one" — 5 paragraphs, full price $0.000594
+   publisher 0xed13AA20701F503304bADB7697cbFD4d0C952Acf
+
+[2/4] FUND — StreamPay micro-stream: $0.030000 over 60s -> publisher
+   ✓ createStream  https://testnet.arcscan.app/tx/0x931a9a0edcfcb860780d5c80ba5fa53c2b1eabd500e6b85a122d83438edcd77f
+   stream #196 flowing at $0.000500/s
+
+[3/4] READ — paying per paragraph, stopping when it no longer pays off
+   ¶0: paid $0.000112  · relevance 14%  https://testnet.arcscan.app/tx/0x96a98e3f4fa334baa9f3f59fddf4b73796ecbf9194470912b1708ccf590219b8
+        "For thirty years the web has had exactly one business model that pays writers reliably: bu…"
+   ¶1: paid $0.000128  · relevance 29%  https://testnet.arcscan.app/tx/0x65bb955e658b631f0225826acdd627bd40a3eb3e6f80e343331965b28e7f3e73
+        "That floor was never a law of nature. It was the cost of moving money through card network…"
+   ¶2: paid $0.000120  · relevance 86%  https://testnet.arcscan.app/tx/0xf11d39efa70fa05c590c692aa934ee898883a271b7b100e8b61d7fe37cfde3f1
+        "Stablecoins on a settlement-first chain change the arithmetic. When USDC is the native gas…"
+   ¶3: paid $0.000122  · relevance 29%  https://testnet.arcscan.app/tx/0x177a06b93ab7ea9f069ca3d145cef6f0aa2fd05c9db854fd632bc176caa78c95
+        "The first buyers of nanopaid content will not be humans clicking a tip jar. They will be a…"
+   ¶4: paid $0.000112  · relevance 29%  https://testnet.arcscan.app/tx/0x9d96450ff3585f33ee5adce21240bd60b0b47424548e635051053a1118c35353
+        "What this needs is not a new token but a new toll booth: a way for a publisher to charge a…"
+
+[4/4] SETTLE — cancel the stream, reclaim the unspent budget
+   reclaimable $0.016000
+   ✓ cancel stream #196  https://testnet.arcscan.app/tx/0x59940121b2d27176082b83ce18e403d28bca7bf41ab3cfe02f9f30f19a9ec196
+
+✅ read 5 paragraph(s), paid $0.000594 total, autonomously, on Arc.
+   balance $181.330893 — every paragraph release was a live StreamPay settlement.
+
+── round 43/48  article=agent-reading-economics budget=0.040 giveup=3
+
+🤖 Reader agent — pays per paragraph on Arc, no human in the loop
+   address  0x2e36F4037E711e1d4c853BBCBF7F526B3714A08a
+   task     "how does an autonomous reader decide which paragraph to pay for"
+   judge    word-overlap heuristic (set ANTHROPIC_API_KEY for the LLM judge)
+   balance  $181.330893
+
+[1/4] BROWSE — GET /article/agent-reading-economics
+   "How an agent decides what to pay for" — 3 paragraphs, full price $0.000300
+   publisher 0xed13AA20701F503304bADB7697cbFD4d0C952Acf
+
+[2/4] FUND — StreamPay micro-stream: $0.040000 over 60s -> publisher
+   ✓ createStream  https://testnet.arcscan.app/tx/0x8086f0d9ba89bf8224947baf0bb852a9867142cf2042fdff0918abc185362dc1
+   stream #197 flowing at $0.000666/s
+
+[3/4] READ — paying per paragraph, stopping when it no longer pays off
+   ¶0: paid $0.000100  · relevance 60%  https://testnet.arcscan.app/tx/0xa87cd8c6e2fae9b1bdfa85ff37c11f3c24793272103f45a171cc810c3c71b124
+        "An autonomous reader does not consume an article the way a person does. It has a budget, a…"
+   ¶1: paid $0.000100  · relevance 20%  https://testnet.arcscan.app/tx/0x054f20608bfa16ce9ba8be2f25e8792ff99ddd2083bd89dc0daae668c9c20fdf
+        "That makes pricing legible in a way human attention never is. A publisher can watch, trans…"
+   ¶2: paid $0.000100  · relevance 0%  https://testnet.arcscan.app/tx/0xb7655b3130e39c7f59a8ba444784dc9fc4a2a92577bd1333ff069c707ad96f87
+        "The settlement rail matters more than the model here. Streaming the payment per second of …"
+
+[4/4] SETTLE — cancel the stream, reclaim the unspent budget
+   reclaimable $0.028000
+   ✓ cancel stream #197  https://testnet.arcscan.app/tx/0x128f6f6198597f826f2fc4cfe8e387077c674e87afdc87ea5630e640b60b66c8
+
+✅ read 3 paragraph(s), paid $0.000300 total, autonomously, on Arc.
+   balance $181.311691 — every paragraph release was a live StreamPay settlement.
+
+── round 44/48  article=arc-nanopayments budget=0.050 giveup=2
+
+🤖 Reader agent — pays per paragraph on Arc, no human in the loop
+   address  0x2e36F4037E711e1d4c853BBCBF7F526B3714A08a
+   task     "who are the first buyers of nanopaid content and why"
+   judge    word-overlap heuristic (set ANTHROPIC_API_KEY for the LLM judge)
+   balance  $181.311691
+
+[1/4] BROWSE — GET /article/arc-nanopayments
+   "Why the smallest payment is the hardest one" — 5 paragraphs, full price $0.000594
+   publisher 0xed13AA20701F503304bADB7697cbFD4d0C952Acf
+
+[2/4] FUND — StreamPay micro-stream: $0.050000 over 60s -> publisher
+   ✓ createStream  https://testnet.arcscan.app/tx/0xf59ba34f6c6c8b6daa8932f263eda6f6168ec95d9a4e54d8689b754abf8f57ad
+   stream #198 flowing at $0.000833/s
+
+[3/4] READ — paying per paragraph, stopping when it no longer pays off
+   ¶0: paid $0.000112  · relevance 0%  https://testnet.arcscan.app/tx/0x58a402f82f1e029e191bd9a7913d77f6c1dc7ebb63f73c866783bbe408d68658
+        "For thirty years the web has had exactly one business model that pays writers reliably: bu…"
+   ¶1: paid $0.000128  · relevance 0%  https://testnet.arcscan.app/tx/0xd893d26999edd1ad9c1dfb7bb2d7980a250c329c9a3dc00019bc2fd956eb9250
+        "That floor was never a law of nature. It was the cost of moving money through card network…"
+   · 2 cold paragraph(s) — task saturated, stop.
+
+[4/4] SETTLE — cancel the stream, reclaim the unspent budget
+   reclaimable $0.038334
+   ✓ cancel stream #198  https://testnet.arcscan.app/tx/0xc8ecafe78f5807c03152053505bf86d1b7b42c56fe927b75bdff7f86b9d89560
+
+✅ read 2 paragraph(s), paid $0.000240 total, autonomously, on Arc.
+   balance $181.292499 — every paragraph release was a live StreamPay settlement.
+
+── round 45/48  article=agent-reading-economics budget=0.010 giveup=3
+
+🤖 Reader agent — pays per paragraph on Arc, no human in the loop
+   address  0x2e36F4037E711e1d4c853BBCBF7F526B3714A08a
+   task     "why is streaming payment per second better than charging per article"
+   judge    word-overlap heuristic (set ANTHROPIC_API_KEY for the LLM judge)
+   balance  $181.292499
+
+[1/4] BROWSE — GET /article/agent-reading-economics
+   "How an agent decides what to pay for" — 3 paragraphs, full price $0.000300
+   publisher 0xed13AA20701F503304bADB7697cbFD4d0C952Acf
+
+[2/4] FUND — StreamPay micro-stream: $0.010000 over 60s -> publisher
+   ✓ createStream  https://testnet.arcscan.app/tx/0xbbe5bf41b1fef62ca07fd9d7d814fec357f34cf1409961d48158e5fdf0f7ef06
+   stream #199 flowing at $0.000166/s
+
+[3/4] READ — paying per paragraph, stopping when it no longer pays off
+   ¶0: paid $0.000100  · relevance 14%  https://testnet.arcscan.app/tx/0x5719d9e812fcb5e7de9e59ed0ef3ff026fb77013c2dcfcc80a020e07e52aa288
+        "An autonomous reader does not consume an article the way a person does. It has a budget, a…"
+   ¶1: paid $0.000100  · relevance 0%  https://testnet.arcscan.app/tx/0x3b9fcb9b8047c88f43d7ecd83274255b549b3b899b8d617056342b94cf3fbdf6
+        "That makes pricing legible in a way human attention never is. A publisher can watch, trans…"
+   ¶2: paid $0.000100  · relevance 86%  https://testnet.arcscan.app/tx/0x667edd7f6e80869b736ea87f2e2cb12636b1c0cf61bf4bc7c516ea401047af9a
+        "The settlement rail matters more than the model here. Streaming the payment per second of …"
+
+[4/4] SETTLE — cancel the stream, reclaim the unspent budget
+   reclaimable $0.006834
+   ✓ cancel stream #199  https://testnet.arcscan.app/tx/0x0d7c603c19160430a327eee6ce27ade040804477278e9eb8466d6f2d0d5b723f
+
+✅ read 3 paragraph(s), paid $0.000300 total, autonomously, on Arc.
+   balance $181.283297 — every paragraph release was a live StreamPay settlement.
+
+── round 46/48  article=arc-nanopayments budget=0.020 giveup=2
+
+🤖 Reader agent — pays per paragraph on Arc, no human in the loop
+   address  0x2e36F4037E711e1d4c853BBCBF7F526B3714A08a
+   task     "what does a publisher need to charge a machine per paragraph"
+   judge    word-overlap heuristic (set ANTHROPIC_API_KEY for the LLM judge)
+   balance  $181.283297
+
+[1/4] BROWSE — GET /article/arc-nanopayments
+   "Why the smallest payment is the hardest one" — 5 paragraphs, full price $0.000594
+   publisher 0xed13AA20701F503304bADB7697cbFD4d0C952Acf
+
+[2/4] FUND — StreamPay micro-stream: $0.020000 over 60s -> publisher
+   ✓ createStream  https://testnet.arcscan.app/tx/0x9bf6f2cd905c7358be41858d3956d5a86466444f1ddf548f2755df44b5ea7d27
+   stream #200 flowing at $0.000333/s
+
+[3/4] READ — paying per paragraph, stopping when it no longer pays off
+   ¶0: paid $0.000112  · relevance 17%  https://testnet.arcscan.app/tx/0xc50c51e0e5335cd0159e092704ff7b5c26fd0ee08845c2546d787c82dd1e2f72
+        "For thirty years the web has had exactly one business model that pays writers reliably: bu…"
+   ¶1: paid $0.000128  · relevance 33%  https://testnet.arcscan.app/tx/0x8e635de8442778e759d785d96e84739ffceb52dfd48e64b662ea5341fd4b19db
+        "That floor was never a law of nature. It was the cost of moving money through card network…"
+   ¶2: paid $0.000120  · relevance 0%  https://testnet.arcscan.app/tx/0x170638dcd561f15ffea0ac7dcdea6a6b3945d4d57ad8c1972fc0abae1c8736e9
+        "Stablecoins on a settlement-first chain change the arithmetic. When USDC is the native gas…"
+   ¶3: paid $0.000122  · relevance 33%  https://testnet.arcscan.app/tx/0xfed6a3f4f33a81be85983696f00f7b96e2039fdba6148ed082a8b12d9b75bbaf
+        "The first buyers of nanopaid content will not be humans clicking a tip jar. They will be a…"
+   ¶4: paid $0.000112  · relevance 100%  https://testnet.arcscan.app/tx/0x9c1e5b94fa7424564a543eb033ce3342794fec99fbd3a56536caa2f27d78408f
+        "What this needs is not a new token but a new toll booth: a way for a publisher to charge a…"
+
+[4/4] SETTLE — cancel the stream, reclaim the unspent budget
+   reclaimable $0.010667
+   ✓ cancel stream #200  https://testnet.arcscan.app/tx/0x12b0003f3b8796269818d692103492264f5174e444f8e6c9b9a5ffb3fdbbbd0d
+
+✅ read 5 paragraph(s), paid $0.000594 total, autonomously, on Arc.
+   balance $181.267773 — every paragraph release was a live StreamPay settlement.
+
+── round 47/48  article=agent-reading-economics budget=0.030 giveup=3
+
+🤖 Reader agent — pays per paragraph on Arc, no human in the loop
+   address  0x2e36F4037E711e1d4c853BBCBF7F526B3714A08a
+   task     "what can a publisher learn from per-transaction reading data"
+   judge    word-overlap heuristic (set ANTHROPIC_API_KEY for the LLM judge)
+   balance  $181.267773
+
+[1/4] BROWSE — GET /article/agent-reading-economics
+   "How an agent decides what to pay for" — 3 paragraphs, full price $0.000300
+   publisher 0xed13AA20701F503304bADB7697cbFD4d0C952Acf
+
+[2/4] FUND — StreamPay micro-stream: $0.030000 over 60s -> publisher
+   ✓ createStream  https://testnet.arcscan.app/tx/0x668c7bb54400191084d022266e99438badc97126f86c6d5dec6d1c447d107f95
+   stream #201 flowing at $0.000500/s
+
+[3/4] READ — paying per paragraph, stopping when it no longer pays off
+   ¶0: paid $0.000100  · relevance 0%  https://testnet.arcscan.app/tx/0x22a3bd56e8af341cdcecd2c370d4801f8753139efc29b083000312db2f7bbb7a
+        "An autonomous reader does not consume an article the way a person does. It has a budget, a…"
+   ¶1: paid $0.000100  · relevance 50%  https://testnet.arcscan.app/tx/0xddb818383fee2b39505b4adec076f183188bd224e726a31c528caae734ebc559
+        "That makes pricing legible in a way human attention never is. A publisher can watch, trans…"
+   ¶2: paid $0.000100  · relevance 50%  https://testnet.arcscan.app/tx/0xd87279af8cde46186dbb0964986a23dd37c1846eb320115bf374bb27cb95dbf2
+        "The settlement rail matters more than the model here. Streaming the payment per second of …"
+
+[4/4] SETTLE — cancel the stream, reclaim the unspent budget
+   reclaimable $0.021000
+   ✓ cancel stream #201  https://testnet.arcscan.app/tx/0x35e07d10f163d9a61a99f73252f0d498df72e97cfa222d9aa4b223c5fdca06c2
+
+✅ read 3 paragraph(s), paid $0.000300 total, autonomously, on Arc.
+   balance $181.252403 — every paragraph release was a live StreamPay settlement.
+
+── round 48/48  article=arc-nanopayments budget=0.040 giveup=2
+
+🤖 Reader agent — pays per paragraph on Arc, no human in the loop
+   address  0x2e36F4037E711e1d4c853BBCBF7F526B3714A08a
+   task     "why does the card fee floor make the long tail of writing invisible"
+   judge    word-overlap heuristic (set ANTHROPIC_API_KEY for the LLM judge)
+   balance  $181.252403
+
+[1/4] BROWSE — GET /article/arc-nanopayments
+   "Why the smallest payment is the hardest one" — 5 paragraphs, full price $0.000594
+   publisher 0xed13AA20701F503304bADB7697cbFD4d0C952Acf
+
+[2/4] FUND — StreamPay micro-stream: $0.040000 over 60s -> publisher
+   ✓ createStream  https://testnet.arcscan.app/tx/0xa8bfa9e1322960b47b33901261f14327d4549131c1a1554f01804b899dc7901f
+   stream #202 flowing at $0.000666/s
+
+[3/4] READ — paying per paragraph, stopping when it no longer pays off
+   ¶0: paid $0.000112  · relevance 13%  https://testnet.arcscan.app/tx/0xa4139adf231c785a2b6d39a46ca09967042d461b722bdd83a66e2baac3d5cb61
+        "For thirty years the web has had exactly one business model that pays writers reliably: bu…"
+   ¶1: paid $0.000128  · relevance 75%  https://testnet.arcscan.app/tx/0xee832920cb0f17d3e9867ba23b95a1630cc79a32503b935420d57b88ae5db187
+        "That floor was never a law of nature. It was the cost of moving money through card network…"
+   ¶2: paid $0.000120  · relevance 0%  https://testnet.arcscan.app/tx/0x838c2a857b931850a3599bd1f71c10a1ae02c6f7eda55c5e9ccde5843af4acc3
+        "Stablecoins on a settlement-first chain change the arithmetic. When USDC is the native gas…"
+   ¶3: paid $0.000122  · relevance 0%  https://testnet.arcscan.app/tx/0xeb97472cf0601f5e6da23a3a7967c262d28cf87d10c0e9c8acd4c63517be6222
+        "The first buyers of nanopaid content will not be humans clicking a tip jar. They will be a…"
+   · 2 cold paragraph(s) — task saturated, stop.
+
+[4/4] SETTLE — cancel the stream, reclaim the unspent budget
+   reclaimable $0.024667
+   ✓ cancel stream #202  https://testnet.arcscan.app/tx/0xe2c1cdc0e6c5659bd1bdf9f34929ded52ac44ff86271dec499ea45d19326eded
+
+✅ read 4 paragraph(s), paid $0.000482 total, autonomously, on Arc.
+   balance $181.230545 — every paragraph release was a live StreamPay settlement.
+
